@@ -8,8 +8,9 @@
     PowerShellVersion = '7.0'
     FunctionsToExport = @(
         'Start-OpenConnection2ForQuickBooks',
-        'Stop-OpenConnection2ForQuickBooks'
-
+        'Stop-OpenConnection2ForQuickBooks',
+        'Start-SessionInQuickBooks',
+        'Stop-SessionInQuickBooks'
     )
     CmdletsToExport = @()
     VariablesToExport = '*'
