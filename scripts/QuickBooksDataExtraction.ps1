@@ -16,6 +16,7 @@ param (
 $currentDate = Get-Date -Format "yyyyMMdd"
 $companyFilePaths = Get-Content "C:\Users\BenjaminW.admin\Developer\QBDataExtraction\CompanyFilePaths2.json" | ConvertFrom-Json
 $reportPath = "C:\Users\BenjaminW.admin\Documents\QBExractions\$currentDate"
+$reportTypes = @("Vendor", "Invoice", "SalesOrder", "PurchaseOrder", "Customer")
 $divisionsToProcess = 
     if ($Divisions -eq "All") {
         $companyFilePaths
@@ -31,6 +32,8 @@ if(-not (Test-Path -Path $reportPath)) {
 }
 
 Import-Module "C:\Users\BenjaminW.admin\Developer\QBDataExtraction\src\QuickBooksInterface\QuickBooksInterface.psd1" -Force
+
+Set-TestMode -Enabled $TestMode
 
 foreach ($division in $divisionsToProcess) {
 
@@ -55,6 +58,7 @@ foreach ($division in $divisionsToProcess) {
             $qBComObject = Start-OpenConnection2ForQuickBooks -DivisionName $division.Division
             Write-Host "OpenConnection2 successful for $($division.Division)"
             $connectionSucceeded = $true
+            Start-Sleep -Seconds 5
             break
         }
         catch {
@@ -84,6 +88,7 @@ foreach ($division in $divisionsToProcess) {
             $ticket = Start-SessionInQuickBooks -QBxmlrp $qBComObject -CompanyFilePath $division.CompanyFilePath
             Write-Host "Session started for $($division.Division)"
             $sessionSucceeded = $true
+            Start-Sleep -Seconds 5
             break
         }
         catch {
@@ -112,8 +117,21 @@ foreach ($division in $divisionsToProcess) {
         continue
     }
 
-    Write-Host "Doing something for 15 seconds ..."
-    Start-Sleep -Seconds 15
+    ### This is the query blcok. This block of code is for getting 
+    # the response query from Quickbooks and saving it to a 
+    # location as an xml file.
+    try {
+        Write-Host "Attempting to get the Invoice report for $($division.Division)."
+        $XMLResponse = Get-Report -ReportType "Invoice" -QBXMLRp $qBComObject -Ticket $ticket
+        $CurrentDateTimeForExportFileName = Get-Date -Format "yyyyMMdd_HHmm"
+        $OutputPath = Join-Path -Path $reportPath -ChildPath "${CurrentDateTimeForExportFileName}_$($division.Division)_Invoice.xml"
+        Save-QBXMLFile -QBXMLData $XMLResponse -SavePath $OutputPath
+    }
+    catch {
+        throw "Error getting Invoice report: $_"
+        exit
+    }
+    ### End query block
 
     # Close the session
     if ($ticket) {

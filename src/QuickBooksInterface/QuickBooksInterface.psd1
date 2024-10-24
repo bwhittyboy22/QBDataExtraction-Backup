@@ -10,7 +10,10 @@
         'Start-OpenConnection2ForQuickBooks',
         'Stop-OpenConnection2ForQuickBooks',
         'Start-SessionInQuickBooks',
-        'Stop-SessionInQuickBooks'
+        'Stop-SessionInQuickBooks',
+        'Get-Report',
+        'Save-QBXMLFile',
+        'Set-TestMode'
     )
     CmdletsToExport = @()
     VariablesToExport = '*'
