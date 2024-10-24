@@ -17,3 +17,6 @@ build/
 *.swp
 *.swo
 .DS_Store
+
+# Other files to exclude
+/src/misc/
