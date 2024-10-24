@@ -38,60 +38,84 @@ foreach ($division in $divisionsToProcess) {
     $maxSessionRetries = 3
     $connectionRetryCount = 0
     $sessionRetryCount = 0
+    $connectionSucceeded = $false
+    $sessionSucceeded = $false
     $waitTime = 30
+    $qBComObject = $null
+    $ticket = $null
 
-    # This is the connection block. The script will try 3 times to open a connection before moving on
+    # This is the open connection block. The script will try 3 times to open a connection before moving on
     # to a different division. If successful then an OpenConnection2.RequestProcessor object is
     # returned.
     while ($connectionRetryCount -le $maxConnectionRetries) {
-        $qBComObject = $null
 
         try {
             $connectionRetryCount++
             Write-Host "Attempting to Open Connection for $($division.Division)..."
             $qBComObject = Start-OpenConnection2ForQuickBooks -DivisionName $division.Division
             Write-Host "OpenConnection2 successful for $($division.Division)"
+            $connectionSucceeded = $true
             break
         }
         catch {
             $errorMessage = "An error occurred: $($_.Exception.Message)"
             Write-Host $errorMessage
             if ($connectionRetryCount -lt $maxConnectionRetries) {
-                Write-Host "Waiting $waitTime before retrying to connect..."
+                Write-Host "Waiting $waitTime seconds before retrying to connect..."
                 Start-Sleep -Seconds $waitTime
             } else {
-                Write-Host "Maximum retry attempts for connection reached for $($divsion.Division). Moving on to next division."
+                Write-Host "Maximum retry attempts for connection reached for $($division.Division). Moving on to next division."
             }
         }
-    } 
+    }
 
-    # This is the Session block. The script will try 3 times to open a connection before moving on
+    # If connection failed, skip to next division
+    if (-not $connectionSucceeded) {
+        continue
+    }
+
+    # This is the start Session block. The script will try 3 times to open a connection before moving on
     # to a different division.
-    while($sessionRetryCount -lt $maxSessionRetries) {
-        $ticket = $null
+    while ($sessionRetryCount -le $maxSessionRetries) {
 
         try {
             $sessionRetryCount++
             Write-Host "Attempting to start a session for $($division.Division)"
-            $ticket = Start-SessionInQuickBooks -QBxmlrp $qBComObject -CompanyFilePath $($division.CompanyFilePath)
+            $ticket = Start-SessionInQuickBooks -QBxmlrp $qBComObject -CompanyFilePath $division.CompanyFilePath
             Write-Host "Session started for $($division.Division)"
+            $sessionSucceeded = $true
             break
         }
         catch {
             $errorMessage = "An error occurred: $($_.Exception.Message)"
             Write-Host $errorMessage
             if ($sessionRetryCount -lt $maxSessionRetries) {
-                Write-Host "Waiting $waitTime before retrying to to start a session..."
+                Write-Host "Waiting $waitTime seconds before retrying to start a session..."
                 Start-Sleep -Seconds $waitTime
             } else {
-                Write-Host "Maximum retry attempts to start a session reached for $($divsion.Division). Moving on to next division."
+                Write-Host "Maximum retry attempts to start a session reached for $($division.Division). Moving on to next division."
             }
         }
+    }
+
+    # If session failed, close connection and skip to next division
+    if (-not $sessionSucceeded) {
+        if ($qBComObject) {
+            try {
+                Stop-OpenConnection2ForQuickBooks -QBxmlrp $qBComObject
+                Write-Host "$($division.Division) connection closed."
+            }
+            catch {
+                Write-Host "Failed to close connection for $($division.Division)"
+            }
+        }
+        continue
     }
 
     Write-Host "Doing something for 15 seconds ..."
     Start-Sleep -Seconds 15
 
+    # Close the session
     if ($ticket) {
         try {
             Stop-SessionInQuickBooks -qbxmlrp $qBComObject -ticket $ticket
@@ -101,6 +125,7 @@ foreach ($division in $divisionsToProcess) {
             Write-Host "Failed to stop session for $($division.Division)"
         }
     }
+    # Close the connection
     if ($qBComObject) {
         try {
             Stop-OpenConnection2ForQuickBooks -QBxmlrp $qBComObject
@@ -108,7 +133,8 @@ foreach ($division in $divisionsToProcess) {
         }
         catch {
             Write-Host "Failed to close connection for $($division.Division)"
-        } finally {
+        }
+        finally {
             # Waiting 45 seconds before moving on to the next division.
             # Through testing, we have found that waiting for QuickBooks
             # to catch-up and settle provides a more stable data pipeline.
