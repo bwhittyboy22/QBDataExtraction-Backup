@@ -1,7 +1,7 @@
 
 param (
     [Parameter(Mandatory=$false)]
-    [string]$Divisions,
+    [string[]]$Divisions,
 
     [Parameter(Mandatory=$false)]
     [string]$ReportType = "All",
@@ -13,7 +13,9 @@ param (
     [switch]$TestMode
 )
 
+$currentDate = Get-Date -Format "yyyyMMdd"
 $companyFilePaths = Get-Content "C:\Users\BenjaminW.admin\Developer\QBDataExtraction\CompanyFilePaths2.json" | ConvertFrom-Json
+$reportPath = "C:\Users\BenjaminW.admin\Documents\QBExractions\$currentDate"
 $divisionsToProcess = 
     if ($Divisions -eq "All") {
         $companyFilePaths
@@ -23,6 +25,10 @@ $divisionsToProcess =
     } else {
         $companyFilePaths | Where-Object Division -in $Divisions.Split(',')
     }
+
+if(-not (Test-Path -Path $reportPath)) {
+    New-Item -ItemType Directory -Path $reportPath | Out-Null
+}
 
 Import-Module "C:\Users\BenjaminW.admin\Developer\QBDataExtraction\src\QuickBooksInterface\QuickBooksInterface.psd1" -Force
 
@@ -59,6 +65,8 @@ foreach ($division in $divisionsToProcess) {
         }
     } 
 
+    # This is the Session block. The script will try 3 times to open a connection before moving on
+    # to a different division.
     while($sessionRetryCount -lt $maxSessionRetries) {
         $ticket = $null
 
@@ -66,6 +74,7 @@ foreach ($division in $divisionsToProcess) {
             $sessionRetryCount++
             Write-Host "Attempting to start a session for $($division.Division)"
             $ticket = Start-SessionInQuickBooks -QBxmlrp $qBComObject -CompanyFilePath $($division.CompanyFilePath)
+            Write-Host "Session started for $($division.Division)"
             break
         }
         catch {
