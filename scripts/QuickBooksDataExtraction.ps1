@@ -4,7 +4,7 @@ param (
     [string[]]$Divisions,
 
     [Parameter(Mandatory=$false)]
-    [string]$ReportType = "All",
+    [string[]]$ReportType = "All",
 
     [switch]$DisableConversion,
 
@@ -26,7 +26,10 @@ $divisionsToProcess =
     } else {
         $companyFilePaths | Where-Object Division -in $Divisions.Split(',')
     }
-
+$reportsToProcess = 
+    if($ReportType -eq "All") { $reportTypes }
+    elseif ([string]::IsNullOrEmpty($ReportType)) { Write-Host "No report specified." // exit }
+    
 if(-not (Test-Path -Path $reportPath)) {
     New-Item -ItemType Directory -Path $reportPath | Out-Null
 }
@@ -120,16 +123,18 @@ foreach ($division in $divisionsToProcess) {
     ### This is the query blcok. This block of code is for getting 
     # the response query from Quickbooks and saving it to a 
     # location as an xml file.
-    try {
-        Write-Host "Attempting to get the Invoice report for $($division.Division)."
-        $XMLResponse = Get-Report -ReportType "Invoice" -QBXMLRp $qBComObject -Ticket $ticket
-        $CurrentDateTimeForExportFileName = Get-Date -Format "yyyyMMdd_HHmm"
-        $OutputPath = Join-Path -Path $reportPath -ChildPath "${CurrentDateTimeForExportFileName}_$($division.Division)_Invoice.xml"
-        Save-QBXMLFile -QBXMLData $XMLResponse -SavePath $OutputPath
-    }
-    catch {
-        throw "Error getting Invoice report: $_"
-        exit
+    foreach ($reportType in $reportsToProcess) {
+        try {
+            Write-Host "Attempting to get the $reportType report for $($division.Division)."
+            $XMLResponse = Get-Report -ReportType $($reportType) -QBXMLRp $qBComObject -Ticket $ticket
+            $CurrentDateTimeForExportFileName = Get-Date -Format "yyyyMMdd_HHmm"
+            $OutputPath = Join-Path -Path $reportPath -ChildPath "${CurrentDateTimeForExportFileName}_$($division.Division)_$reportType.xml"
+            Save-QBXMLFile -QBXMLData $XMLResponse -SavePath $OutputPath
+        }
+        catch {
+            throw "Error getting $reportType report: $_"
+            continue
+        }
     }
     ### End query block
 
