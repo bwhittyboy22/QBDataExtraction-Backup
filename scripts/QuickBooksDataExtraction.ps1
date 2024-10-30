@@ -28,7 +28,12 @@ $divisionsToProcess =
     }
 $reportsToProcess = 
     if($ReportType -eq "All") { $reportTypes }
-    elseif ([string]::IsNullOrEmpty($ReportType)) { Write-Host "No report specified." // exit }
+    elseif ([string]::IsNullOrEmpty($ReportType)) { 
+        Write-Host "No report specified."
+        exit
+    } else {
+        $ReportType
+    }
     
 if(-not (Test-Path -Path $reportPath)) {
     New-Item -ItemType Directory -Path $reportPath | Out-Null
@@ -126,9 +131,9 @@ foreach ($division in $divisionsToProcess) {
     foreach ($reportType in $reportsToProcess) {
         try {
             Write-Host "Attempting to get the $reportType report for $($division.Division)."
-            $XMLResponse = Get-Report -ReportType $($reportType) -QBXMLRp $qBComObject -Ticket $ticket
+            $XMLResponse = Get-Report -ReportType $($reportType) -QBXMLRp $qBComObject -Ticket $ticket -PriorDay
             $CurrentDateTimeForExportFileName = Get-Date -Format "yyyyMMdd_HHmm"
-            $OutputPath = Join-Path -Path $reportPath -ChildPath "${CurrentDateTimeForExportFileName}_$($division.Division)_$reportType.xml"
+            $OutputPath = Join-Path -Path $reportPath -ChildPath "test_${CurrentDateTimeForExportFileName}_$($division.Division)_$reportType.xml"
             Save-QBXMLFile -QBXMLData $XMLResponse -SavePath $OutputPath
         }
         catch {
