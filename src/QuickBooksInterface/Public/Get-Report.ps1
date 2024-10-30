@@ -20,7 +20,10 @@ function Get-Report {
       [switch]$PriorDay,
 
       [Parameter(Mandatory=$false)]
-      [switch]$YTD
+      [switch]$YTD,
+
+      [Parameter(Mandatory=$false)]
+      [switch]$IncludeLineItems
   )
 
   # Ensure there are no conflicting date filters
@@ -64,6 +67,12 @@ function Get-Report {
                      </ModifiedDateRangeFilter>"
   }
 
+  # Determine the IncludeLineItems setting
+  $includeLineItemsElement = ""
+  if ($IncludeLineItems) {
+      $includeLineItemsElement = "<IncludeLineItems>true</IncludeLineItems>"
+  }
+
   try {
       $maxReturnedElement = $script:IsTestMode ? "<MaxReturned>10</MaxReturned>" : ""
 
@@ -74,6 +83,7 @@ function Get-Report {
           <${ReportType}QueryRq requestID="2">
             $dateFilter
             $maxReturnedElement
+            $includeLineItemsElement
           </${ReportType}QueryRq>
         </QBXMLMsgsRq>
       </QBXML>
