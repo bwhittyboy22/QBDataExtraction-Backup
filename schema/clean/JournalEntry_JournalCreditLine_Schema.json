@@ -1,0 +1,118 @@
+{
+  "Fields": {
+    "EntityRef.ListID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ListID",
+      "ParentPath": "JournalCreditLine.EntityRef"
+    },
+    "EntityRef.FullName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "FullName",
+      "ParentPath": "JournalCreditLine.EntityRef"
+    },
+    "AccountRef": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "AccountRef",
+      "ParentPath": "JournalCreditLine"
+    },
+    "EntityRef": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "EntityRef",
+      "ParentPath": "JournalCreditLine"
+    },
+    "ClassRef": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ClassRef",
+      "ParentPath": "JournalCreditLine"
+    },
+    "TxnLineID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "TxnLineID",
+      "ParentPath": "JournalCreditLine"
+    },
+    "Amount": {
+      "DataType": "decimal",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Amount",
+      "ParentPath": "JournalCreditLine"
+    },
+    "BillableStatus": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "BillableStatus",
+      "ParentPath": "JournalCreditLine"
+    },
+    "ClassRef.ListID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ListID",
+      "ParentPath": "JournalCreditLine.ClassRef"
+    },
+    "AccountRef.FullName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "FullName",
+      "ParentPath": "JournalCreditLine.AccountRef"
+    },
+    "ItemSalesTaxRef.FullName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "FullName",
+      "ParentPath": "JournalCreditLine.ItemSalesTaxRef"
+    },
+    "AccountRef.ListID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ListID",
+      "ParentPath": "JournalCreditLine.AccountRef"
+    },
+    "ItemSalesTaxRef": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ItemSalesTaxRef",
+      "ParentPath": "JournalCreditLine"
+    },
+    "ClassRef.FullName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "FullName",
+      "ParentPath": "JournalCreditLine.ClassRef"
+    },
+    "Memo": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Memo",
+      "ParentPath": "JournalCreditLine"
+    },
+    "ItemSalesTaxRef.ListID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ListID",
+      "ParentPath": "JournalCreditLine.ItemSalesTaxRef"
+    }
+  },
+  "TotalRecords": null,
+  "ReportType": "JournalEntry"
+}

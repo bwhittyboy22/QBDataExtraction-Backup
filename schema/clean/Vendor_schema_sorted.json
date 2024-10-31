@@ -1,0 +1,839 @@
+{
+  "Fields": {
+    "AccountNumber": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "AccountNumber",
+      "ParentPath": ""
+    },
+    "AdditionalContactRef": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "AdditionalContactRef",
+      "ParentPath": ""
+    },
+    "AdditionalContactRef.ContactName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ContactName",
+      "ParentPath": "AdditionalContactRef"
+    },
+    "AdditionalContactRef.ContactValue": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ContactValue",
+      "ParentPath": "AdditionalContactRef"
+    },
+    "AdditionalNotesRet": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "AdditionalNotesRet",
+      "ParentPath": ""
+    },
+    "AdditionalNotesRet.Date": {
+      "DataType": "date",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Date",
+      "ParentPath": "AdditionalNotesRet"
+    },
+    "AdditionalNotesRet.Note": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Note",
+      "ParentPath": "AdditionalNotesRet"
+    },
+    "AdditionalNotesRet.NoteID": {
+      "DataType": "integer",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "NoteID",
+      "ParentPath": "AdditionalNotesRet"
+    },
+    "AltContact": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "AltContact",
+      "ParentPath": ""
+    },
+    "AltPhone": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "AltPhone",
+      "ParentPath": ""
+    },
+    "Balance": {
+      "DataType": "decimal",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Balance",
+      "ParentPath": ""
+    },
+    "BillingRateRef": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "BillingRateRef",
+      "ParentPath": ""
+    },
+    "BillingRateRef.FullName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "FullName",
+      "ParentPath": "BillingRateRef"
+    },
+    "BillingRateRef.ListID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ListID",
+      "ParentPath": "BillingRateRef"
+    },
+    "Cc": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Cc",
+      "ParentPath": ""
+    },
+    "ClassRef": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ClassRef",
+      "ParentPath": ""
+    },
+    "ClassRef.FullName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "FullName",
+      "ParentPath": "ClassRef"
+    },
+    "ClassRef.ListID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ListID",
+      "ParentPath": "ClassRef"
+    },
+    "CompanyName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "CompanyName",
+      "ParentPath": ""
+    },
+    "Contact": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Contact",
+      "ParentPath": ""
+    },
+    "ContactsRet": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ContactsRet",
+      "ParentPath": ""
+    },
+    "ContactsRet.AdditionalContactRef": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "AdditionalContactRef",
+      "ParentPath": "ContactsRet"
+    },
+    "ContactsRet.AdditionalContactRef.ContactName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ContactName",
+      "ParentPath": "ContactsRet.AdditionalContactRef"
+    },
+    "ContactsRet.AdditionalContactRef.ContactValue": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ContactValue",
+      "ParentPath": "ContactsRet.AdditionalContactRef"
+    },
+    "ContactsRet.Contact": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Contact",
+      "ParentPath": "ContactsRet"
+    },
+    "ContactsRet.EditSequence": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "EditSequence",
+      "ParentPath": "ContactsRet"
+    },
+    "ContactsRet.FirstName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "FirstName",
+      "ParentPath": "ContactsRet"
+    },
+    "ContactsRet.JobTitle": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "JobTitle",
+      "ParentPath": "ContactsRet"
+    },
+    "ContactsRet.LastName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "LastName",
+      "ParentPath": "ContactsRet"
+    },
+    "ContactsRet.ListID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ListID",
+      "ParentPath": "ContactsRet"
+    },
+    "ContactsRet.MiddleName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "MiddleName",
+      "ParentPath": "ContactsRet"
+    },
+    "ContactsRet.Salutation": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Salutation",
+      "ParentPath": "ContactsRet"
+    },
+    "ContactsRet.TimeCreated": {
+      "DataType": "datetime",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "TimeCreated",
+      "ParentPath": "ContactsRet"
+    },
+    "ContactsRet.TimeModified": {
+      "DataType": "datetime",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "TimeModified",
+      "ParentPath": "ContactsRet"
+    },
+    "CreditLimit": {
+      "DataType": "decimal",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "CreditLimit",
+      "ParentPath": ""
+    },
+    "CurrencyRef": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "CurrencyRef",
+      "ParentPath": ""
+    },
+    "CurrencyRef.FullName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "FullName",
+      "ParentPath": "CurrencyRef"
+    },
+    "CurrencyRef.ListID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ListID",
+      "ParentPath": "CurrencyRef"
+    },
+    "DataExtRet": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "DataExtRet",
+      "ParentPath": ""
+    },
+    "DataExtRet.DataExtName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "DataExtName",
+      "ParentPath": "DataExtRet"
+    },
+    "DataExtRet.DataExtType": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "DataExtType",
+      "ParentPath": "DataExtRet"
+    },
+    "DataExtRet.DataExtValue": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "DataExtValue",
+      "ParentPath": "DataExtRet"
+    },
+    "DataExtRet.OwnerID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "OwnerID",
+      "ParentPath": "DataExtRet"
+    },
+    "EditSequence": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "EditSequence",
+      "ParentPath": ""
+    },
+    "Email": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Email",
+      "ParentPath": ""
+    },
+    "ExternalGUID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ExternalGUID",
+      "ParentPath": ""
+    },
+    "Fax": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Fax",
+      "ParentPath": ""
+    },
+    "FirstName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "FirstName",
+      "ParentPath": ""
+    },
+    "IsActive": {
+      "DataType": "boolean",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "IsActive",
+      "ParentPath": ""
+    },
+    "IsSalesTaxAgency": {
+      "DataType": "boolean",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "IsSalesTaxAgency",
+      "ParentPath": ""
+    },
+    "IsTaxAgency": {
+      "DataType": "boolean",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "IsTaxAgency",
+      "ParentPath": ""
+    },
+    "IsTaxOnTax": {
+      "DataType": "boolean",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "IsTaxOnTax",
+      "ParentPath": ""
+    },
+    "IsTaxTrackedOnPurchases": {
+      "DataType": "boolean",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "IsTaxTrackedOnPurchases",
+      "ParentPath": ""
+    },
+    "IsTaxTrackedOnSales": {
+      "DataType": "boolean",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "IsTaxTrackedOnSales",
+      "ParentPath": ""
+    },
+    "IsVendorEligibleFor1099": {
+      "DataType": "boolean",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "IsVendorEligibleFor1099",
+      "ParentPath": ""
+    },
+    "JobTitle": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "JobTitle",
+      "ParentPath": ""
+    },
+    "LastName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "LastName",
+      "ParentPath": ""
+    },
+    "ListID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ListID",
+      "ParentPath": ""
+    },
+    "MiddleName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "MiddleName",
+      "ParentPath": ""
+    },
+    "Name": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Name",
+      "ParentPath": ""
+    },
+    "NameOnCheck": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "NameOnCheck",
+      "ParentPath": ""
+    },
+    "Notes": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Notes",
+      "ParentPath": ""
+    },
+    "Phone": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Phone",
+      "ParentPath": ""
+    },
+    "PrefillAccountRef": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "PrefillAccountRef",
+      "ParentPath": ""
+    },
+    "PrefillAccountRef.FullName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "FullName",
+      "ParentPath": "PrefillAccountRef"
+    },
+    "PrefillAccountRef.ListID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ListID",
+      "ParentPath": "PrefillAccountRef"
+    },
+    "ReportingPeriod": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ReportingPeriod",
+      "ParentPath": ""
+    },
+    "SalesTaxCodeRef": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "SalesTaxCodeRef",
+      "ParentPath": ""
+    },
+    "SalesTaxCodeRef.FullName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "FullName",
+      "ParentPath": "SalesTaxCodeRef"
+    },
+    "SalesTaxCodeRef.ListID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ListID",
+      "ParentPath": "SalesTaxCodeRef"
+    },
+    "SalesTaxCountry": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "SalesTaxCountry",
+      "ParentPath": ""
+    },
+    "SalesTaxReturnRef": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "SalesTaxReturnRef",
+      "ParentPath": ""
+    },
+    "SalesTaxReturnRef.FullName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "FullName",
+      "ParentPath": "SalesTaxReturnRef"
+    },
+    "SalesTaxReturnRef.ListID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ListID",
+      "ParentPath": "SalesTaxReturnRef"
+    },
+    "Salutation": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Salutation",
+      "ParentPath": ""
+    },
+    "ShipAddress": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ShipAddress",
+      "ParentPath": ""
+    },
+    "ShipAddress.Addr1": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Addr1",
+      "ParentPath": "ShipAddress"
+    },
+    "ShipAddress.Addr2": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Addr2",
+      "ParentPath": "ShipAddress"
+    },
+    "ShipAddress.Addr3": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Addr3",
+      "ParentPath": "ShipAddress"
+    },
+    "ShipAddress.Addr4": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Addr4",
+      "ParentPath": "ShipAddress"
+    },
+    "ShipAddress.Addr5": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Addr5",
+      "ParentPath": "ShipAddress"
+    },
+    "ShipAddress.City": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "City",
+      "ParentPath": "ShipAddress"
+    },
+    "ShipAddress.Country": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Country",
+      "ParentPath": "ShipAddress"
+    },
+    "ShipAddress.Note": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Note",
+      "ParentPath": "ShipAddress"
+    },
+    "ShipAddress.PostalCode": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "PostalCode",
+      "ParentPath": "ShipAddress"
+    },
+    "ShipAddress.State": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "State",
+      "ParentPath": "ShipAddress"
+    },
+    "TaxOnPurchasesAccountRef": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "TaxOnPurchasesAccountRef",
+      "ParentPath": ""
+    },
+    "TaxOnPurchasesAccountRef.FullName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "FullName",
+      "ParentPath": "TaxOnPurchasesAccountRef"
+    },
+    "TaxOnPurchasesAccountRef.ListID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ListID",
+      "ParentPath": "TaxOnPurchasesAccountRef"
+    },
+    "TaxOnSalesAccountRef": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "TaxOnSalesAccountRef",
+      "ParentPath": ""
+    },
+    "TaxOnSalesAccountRef.FullName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "FullName",
+      "ParentPath": "TaxOnSalesAccountRef"
+    },
+    "TaxOnSalesAccountRef.ListID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ListID",
+      "ParentPath": "TaxOnSalesAccountRef"
+    },
+    "TaxRegistrationNumber": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "TaxRegistrationNumber",
+      "ParentPath": ""
+    },
+    "TermsRef": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "TermsRef",
+      "ParentPath": ""
+    },
+    "TermsRef.FullName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "FullName",
+      "ParentPath": "TermsRef"
+    },
+    "TermsRef.ListID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ListID",
+      "ParentPath": "TermsRef"
+    },
+    "TimeCreated": {
+      "DataType": "datetime",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "TimeCreated",
+      "ParentPath": ""
+    },
+    "TimeModified": {
+      "DataType": "datetime",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "TimeModified",
+      "ParentPath": ""
+    },
+    "VendorAddress": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "VendorAddress",
+      "ParentPath": ""
+    },
+    "VendorAddress.Addr1": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Addr1",
+      "ParentPath": "VendorAddress"
+    },
+    "VendorAddress.Addr2": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Addr2",
+      "ParentPath": "VendorAddress"
+    },
+    "VendorAddress.Addr3": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Addr3",
+      "ParentPath": "VendorAddress"
+    },
+    "VendorAddress.Addr4": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Addr4",
+      "ParentPath": "VendorAddress"
+    },
+    "VendorAddress.Addr5": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Addr5",
+      "ParentPath": "VendorAddress"
+    },
+    "VendorAddress.City": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "City",
+      "ParentPath": "VendorAddress"
+    },
+    "VendorAddress.Country": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Country",
+      "ParentPath": "VendorAddress"
+    },
+    "VendorAddress.Note": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Note",
+      "ParentPath": "VendorAddress"
+    },
+    "VendorAddress.PostalCode": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "PostalCode",
+      "ParentPath": "VendorAddress"
+    },
+    "VendorAddress.State": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "State",
+      "ParentPath": "VendorAddress"
+    },
+    "VendorAddressBlock": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "VendorAddressBlock",
+      "ParentPath": ""
+    },
+    "VendorAddressBlock.Addr1": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Addr1",
+      "ParentPath": "VendorAddressBlock"
+    },
+    "VendorAddressBlock.Addr2": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Addr2",
+      "ParentPath": "VendorAddressBlock"
+    },
+    "VendorAddressBlock.Addr3": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Addr3",
+      "ParentPath": "VendorAddressBlock"
+    },
+    "VendorAddressBlock.Addr4": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Addr4",
+      "ParentPath": "VendorAddressBlock"
+    },
+    "VendorAddressBlock.Addr5": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Addr5",
+      "ParentPath": "VendorAddressBlock"
+    },
+    "VendorTaxIdent": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "VendorTaxIdent",
+      "ParentPath": ""
+    },
+    "VendorTypeRef": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "VendorTypeRef",
+      "ParentPath": ""
+    },
+    "VendorTypeRef.FullName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "FullName",
+      "ParentPath": "VendorTypeRef"
+    },
+    "VendorTypeRef.ListID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ListID",
+      "ParentPath": "VendorTypeRef"
+    }
+  },
+  "GeneratedDate": "2024-10-30T18:51:22.82489-06:00",
+  "ReportType": "Vendor"
+}

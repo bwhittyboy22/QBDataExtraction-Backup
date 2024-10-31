@@ -1,0 +1,384 @@
+{
+  "Fields": {
+    "InvoiceLineRet.InventorySiteRef.FullName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "FullName",
+      "ParentPath": "InvoiceLineGroupRet.InvoiceLineRet.InventorySiteRef"
+    },
+    "InvoiceLineRet.ItemRef": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ItemRef",
+      "ParentPath": "InvoiceLineGroupRet.InvoiceLineRet"
+    },
+    "InvoiceLineRet.SerialNumber": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "SerialNumber",
+      "ParentPath": "InvoiceLineGroupRet.InvoiceLineRet"
+    },
+    "Desc": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Desc",
+      "ParentPath": "InvoiceLineGroupRet"
+    },
+    "Quantity": {
+      "DataType": "decimal",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Quantity",
+      "ParentPath": "InvoiceLineGroupRet"
+    },
+    "InvoiceLineRet.ExpirationDateForSerialLotNumber": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ExpirationDateForSerialLotNumber",
+      "ParentPath": "InvoiceLineGroupRet.InvoiceLineRet"
+    },
+    "ItemGroupRef.FullName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "FullName",
+      "ParentPath": "InvoiceLineGroupRet.ItemGroupRef"
+    },
+    "InvoiceLineRet.Quantity": {
+      "DataType": "decimal",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Quantity",
+      "ParentPath": "InvoiceLineGroupRet.InvoiceLineRet"
+    },
+    "InvoiceLineRet.DataExtRet.DataExtName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "DataExtName",
+      "ParentPath": "InvoiceLineGroupRet.InvoiceLineRet.DataExtRet"
+    },
+    "InvoiceLineRet.SalesTaxCodeRef": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "SalesTaxCodeRef",
+      "ParentPath": "InvoiceLineGroupRet.InvoiceLineRet"
+    },
+    "ItemGroupRef.ListID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ListID",
+      "ParentPath": "InvoiceLineGroupRet.ItemGroupRef"
+    },
+    "DataExtRet.DataExtType": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "DataExtType",
+      "ParentPath": "InvoiceLineGroupRet.DataExtRet"
+    },
+    "DataExtRet.DataExtValue": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "DataExtValue",
+      "ParentPath": "InvoiceLineGroupRet.DataExtRet"
+    },
+    "OverrideUOMSetRef.ListID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ListID",
+      "ParentPath": "InvoiceLineGroupRet.OverrideUOMSetRef"
+    },
+    "UnitOfMeasure": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "UnitOfMeasure",
+      "ParentPath": "InvoiceLineGroupRet"
+    },
+    "InvoiceLineRet.LotNumber": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "LotNumber",
+      "ParentPath": "InvoiceLineGroupRet.InvoiceLineRet"
+    },
+    "InvoiceLineRet.ItemRef.ListID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ListID",
+      "ParentPath": "InvoiceLineGroupRet.InvoiceLineRet.ItemRef"
+    },
+    "InvoiceLineRet.ServiceDate": {
+      "DataType": "date",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ServiceDate",
+      "ParentPath": "InvoiceLineGroupRet.InvoiceLineRet"
+    },
+    "InvoiceLineRet.SalesTaxCodeRef.FullName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "FullName",
+      "ParentPath": "InvoiceLineGroupRet.InvoiceLineRet.SalesTaxCodeRef"
+    },
+    "InvoiceLineRet.OverrideUOMSetRef.FullName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "FullName",
+      "ParentPath": "InvoiceLineGroupRet.InvoiceLineRet.OverrideUOMSetRef"
+    },
+    "InvoiceLineRet.Other2": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Other2",
+      "ParentPath": "InvoiceLineGroupRet.InvoiceLineRet"
+    },
+    "InvoiceLineRet.InventorySiteRef.ListID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ListID",
+      "ParentPath": "InvoiceLineGroupRet.InvoiceLineRet.InventorySiteRef"
+    },
+    "DataExtRet": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "DataExtRet",
+      "ParentPath": "InvoiceLineGroupRet"
+    },
+    "InvoiceLineRet.Desc": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Desc",
+      "ParentPath": "InvoiceLineGroupRet.InvoiceLineRet"
+    },
+    "InvoiceLineRet.OverrideUOMSetRef": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "OverrideUOMSetRef",
+      "ParentPath": "InvoiceLineGroupRet.InvoiceLineRet"
+    },
+    "TotalAmount": {
+      "DataType": "decimal",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "TotalAmount",
+      "ParentPath": "InvoiceLineGroupRet"
+    },
+    "InvoiceLineRet.OverrideUOMSetRef.ListID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ListID",
+      "ParentPath": "InvoiceLineGroupRet.InvoiceLineRet.OverrideUOMSetRef"
+    },
+    "InvoiceLineRet.ClassRef.FullName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "FullName",
+      "ParentPath": "InvoiceLineGroupRet.InvoiceLineRet.ClassRef"
+    },
+    "OverrideUOMSetRef.FullName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "FullName",
+      "ParentPath": "InvoiceLineGroupRet.OverrideUOMSetRef"
+    },
+    "InvoiceLineRet.ItemRef.FullName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "FullName",
+      "ParentPath": "InvoiceLineGroupRet.InvoiceLineRet.ItemRef"
+    },
+    "InvoiceLineRet.ClassRef": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ClassRef",
+      "ParentPath": "InvoiceLineGroupRet.InvoiceLineRet"
+    },
+    "DataExtRet.OwnerID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "OwnerID",
+      "ParentPath": "InvoiceLineGroupRet.DataExtRet"
+    },
+    "InvoiceLineRet.DataExtRet.DataExtType": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "DataExtType",
+      "ParentPath": "InvoiceLineGroupRet.InvoiceLineRet.DataExtRet"
+    },
+    "IsPrintItemsInGroup": {
+      "DataType": "boolean",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "IsPrintItemsInGroup",
+      "ParentPath": "InvoiceLineGroupRet"
+    },
+    "InvoiceLineRet.InventorySiteLocationRef": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "InventorySiteLocationRef",
+      "ParentPath": "InvoiceLineGroupRet.InvoiceLineRet"
+    },
+    "OverrideUOMSetRef": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "OverrideUOMSetRef",
+      "ParentPath": "InvoiceLineGroupRet"
+    },
+    "InvoiceLineRet.InventorySiteRef": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "InventorySiteRef",
+      "ParentPath": "InvoiceLineGroupRet.InvoiceLineRet"
+    },
+    "InvoiceLineRet.UnitOfMeasure": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "UnitOfMeasure",
+      "ParentPath": "InvoiceLineGroupRet.InvoiceLineRet"
+    },
+    "InvoiceLineRet.RatePercent": {
+      "DataType": "float",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "RatePercent",
+      "ParentPath": "InvoiceLineGroupRet.InvoiceLineRet"
+    },
+    "InvoiceLineRet.DataExtRet": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "DataExtRet",
+      "ParentPath": "InvoiceLineGroupRet.InvoiceLineRet"
+    },
+    "TxnLineID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "TxnLineID",
+      "ParentPath": "InvoiceLineGroupRet"
+    },
+    "InvoiceLineRet.SalesTaxCodeRef.ListID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ListID",
+      "ParentPath": "InvoiceLineGroupRet.InvoiceLineRet.SalesTaxCodeRef"
+    },
+    "InvoiceLineRet.Rate": {
+      "DataType": "decimal",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Rate",
+      "ParentPath": "InvoiceLineGroupRet.InvoiceLineRet"
+    },
+    "InvoiceLineRet.DataExtRet.OwnerID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "OwnerID",
+      "ParentPath": "InvoiceLineGroupRet.InvoiceLineRet.DataExtRet"
+    },
+    "ItemGroupRef": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ItemGroupRef",
+      "ParentPath": "InvoiceLineGroupRet"
+    },
+    "InvoiceLineRet.ClassRef.ListID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ListID",
+      "ParentPath": "InvoiceLineGroupRet.InvoiceLineRet.ClassRef"
+    },
+    "InvoiceLineRet.Other1": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Other1",
+      "ParentPath": "InvoiceLineGroupRet.InvoiceLineRet"
+    },
+    "InvoiceLineRet.TxnLineID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "TxnLineID",
+      "ParentPath": "InvoiceLineGroupRet.InvoiceLineRet"
+    },
+    "InvoiceLineRet.Amount": {
+      "DataType": "decimal",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Amount",
+      "ParentPath": "InvoiceLineGroupRet.InvoiceLineRet"
+    },
+    "InvoiceLineRet.InventorySiteLocationRef.ListID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ListID",
+      "ParentPath": "InvoiceLineGroupRet.InvoiceLineRet.InventorySiteLocationRef"
+    },
+    "InvoiceLineRet": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "InvoiceLineRet",
+      "ParentPath": "InvoiceLineGroupRet"
+    },
+    "DataExtRet.DataExtName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "DataExtName",
+      "ParentPath": "InvoiceLineGroupRet.DataExtRet"
+    },
+    "InvoiceLineRet.DataExtRet.DataExtValue": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "DataExtValue",
+      "ParentPath": "InvoiceLineGroupRet.InvoiceLineRet.DataExtRet"
+    },
+    "InvoiceLineRet.InventorySiteLocationRef.FullName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "FullName",
+      "ParentPath": "InvoiceLineGroupRet.InvoiceLineRet.InventorySiteLocationRef"
+    }
+  },
+  "TotalRecords": null,
+  "ReportType": "Invoice"
+}

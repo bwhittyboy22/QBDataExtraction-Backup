@@ -10,7 +10,9 @@ param (
 
     [switch]$DisableUpload,
 
-    [switch]$TestMode
+    [switch]$TestMode,
+
+    [switch]$PriorDay
 )
 
 $currentDate = Get-Date -Format "yyyyMMdd"
@@ -51,7 +53,7 @@ foreach ($division in $divisionsToProcess) {
     $sessionRetryCount = 0
     $connectionSucceeded = $false
     $sessionSucceeded = $false
-    $waitTime = 30
+    $waitTime = 5
     $qBComObject = $null
     $ticket = $null
 
@@ -130,14 +132,40 @@ foreach ($division in $divisionsToProcess) {
     # location as an xml file.
     foreach ($reportType in $reportsToProcess) {
         try {
-            Write-Host "Attempting to get the $reportType report for $($division.Division)."
-            $XMLResponse = Get-Report -ReportType $($reportType) -QBXMLRp $qBComObject -Ticket $ticket -PriorDay -IncludeLineItems
+            # Create a hashtable for splatting parameters
+            $reportParams = @{
+                ReportType = "$reportType"  # Ensure it's a string
+                QBXMLRp = $qBComObject
+                Ticket = $ticket
+            }
+    
+            # Define which report types support line items
+            $reportsWithLineItems = @('Invoice', 'SalesOrder', 'PurchaseOrder', 'JournalEntry')
+    
+            if ($PriorDay) {
+                Write-Host "Attempting to get the $reportType report for $($division.Division) for the prior day."
+                $reportParams['PriorDay'] = $true
+                
+                # Only add IncludeLineItems if the report type supports it
+                if ($reportsWithLineItems -contains $reportType) {
+                    $reportParams['IncludeLineItems'] = $true
+                }
+            } else {
+                Write-Host "Attempting to get the $reportType report for $($division.Division). All data pull"
+                # Only add IncludeLineItems if the report type supports it
+                if ($reportsWithLineItems -contains $reportType) {
+                    $reportParams['IncludeLineItems'] = $true
+                }
+            }
+    
+            $XMLResponse = Get-Report @reportParams
+    
             $CurrentDateTimeForExportFileName = Get-Date -Format "yyyyMMdd_HHmm"
-            $OutputPath = Join-Path -Path $reportPath -ChildPath "test_${CurrentDateTimeForExportFileName}_$($division.Division)_$reportType.xml"
+            $OutputPath = Join-Path -Path $reportPath -ChildPath "${CurrentDateTimeForExportFileName}_$($division.Division)_$reportType.xml"
             Save-QBXMLFile -QBXMLData $XMLResponse -SavePath $OutputPath
         }
         catch {
-            throw "Error getting $reportType report: $_"
+            Write-Host "Error getting $reportType report: $_"
             continue
         }
     }
