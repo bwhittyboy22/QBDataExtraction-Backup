@@ -1,0 +1,384 @@
+{
+  "Fields": {
+    "CurrencyRef": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "CurrencyRef",
+      "ParentPath": ""
+    },
+    "CurrencyRef.FullName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "FullName",
+      "ParentPath": "CurrencyRef"
+    },
+    "CurrencyRef.ListID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ListID",
+      "ParentPath": "CurrencyRef"
+    },
+    "DataExtRet": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "DataExtRet",
+      "ParentPath": ""
+    },
+    "DataExtRet.DataExtName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "DataExtName",
+      "ParentPath": "DataExtRet"
+    },
+    "DataExtRet.DataExtType": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "DataExtType",
+      "ParentPath": "DataExtRet"
+    },
+    "DataExtRet.DataExtValue": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "DataExtValue",
+      "ParentPath": "DataExtRet"
+    },
+    "DataExtRet.OwnerID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "OwnerID",
+      "ParentPath": "DataExtRet"
+    },
+    "EditSequence": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "EditSequence",
+      "ParentPath": ""
+    },
+    "ExchangeRate": {
+      "DataType": "float",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ExchangeRate",
+      "ParentPath": ""
+    },
+    "ExternalGUID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ExternalGUID",
+      "ParentPath": ""
+    },
+    "IsAdjustment": {
+      "DataType": "boolean",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "IsAdjustment",
+      "ParentPath": ""
+    },
+    "IsAmountsEnteredInHomeCurrency": {
+      "DataType": "boolean",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "IsAmountsEnteredInHomeCurrency",
+      "ParentPath": ""
+    },
+    "IsHomeCurrencyAdjustment": {
+      "DataType": "boolean",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "IsHomeCurrencyAdjustment",
+      "ParentPath": ""
+    },
+    "JournalCreditLine": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "JournalCreditLine",
+      "ParentPath": ""
+    },
+    "JournalCreditLine.AccountRef": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "AccountRef",
+      "ParentPath": "JournalCreditLine"
+    },
+    "JournalCreditLine.AccountRef.FullName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "FullName",
+      "ParentPath": "JournalCreditLine.AccountRef"
+    },
+    "JournalCreditLine.AccountRef.ListID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ListID",
+      "ParentPath": "JournalCreditLine.AccountRef"
+    },
+    "JournalCreditLine.Amount": {
+      "DataType": "decimal",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Amount",
+      "ParentPath": "JournalCreditLine"
+    },
+    "JournalCreditLine.BillableStatus": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "BillableStatus",
+      "ParentPath": "JournalCreditLine"
+    },
+    "JournalCreditLine.ClassRef": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ClassRef",
+      "ParentPath": "JournalCreditLine"
+    },
+    "JournalCreditLine.ClassRef.FullName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "FullName",
+      "ParentPath": "JournalCreditLine.ClassRef"
+    },
+    "JournalCreditLine.ClassRef.ListID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ListID",
+      "ParentPath": "JournalCreditLine.ClassRef"
+    },
+    "JournalCreditLine.EntityRef": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "EntityRef",
+      "ParentPath": "JournalCreditLine"
+    },
+    "JournalCreditLine.EntityRef.FullName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "FullName",
+      "ParentPath": "JournalCreditLine.EntityRef"
+    },
+    "JournalCreditLine.EntityRef.ListID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ListID",
+      "ParentPath": "JournalCreditLine.EntityRef"
+    },
+    "JournalCreditLine.ItemSalesTaxRef": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ItemSalesTaxRef",
+      "ParentPath": "JournalCreditLine"
+    },
+    "JournalCreditLine.ItemSalesTaxRef.FullName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "FullName",
+      "ParentPath": "JournalCreditLine.ItemSalesTaxRef"
+    },
+    "JournalCreditLine.ItemSalesTaxRef.ListID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ListID",
+      "ParentPath": "JournalCreditLine.ItemSalesTaxRef"
+    },
+    "JournalCreditLine.Memo": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Memo",
+      "ParentPath": "JournalCreditLine"
+    },
+    "JournalCreditLine.TxnLineID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "TxnLineID",
+      "ParentPath": "JournalCreditLine"
+    },
+    "JournalDebitLine": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "JournalDebitLine",
+      "ParentPath": ""
+    },
+    "JournalDebitLine.AccountRef": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "AccountRef",
+      "ParentPath": "JournalDebitLine"
+    },
+    "JournalDebitLine.AccountRef.FullName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "FullName",
+      "ParentPath": "JournalDebitLine.AccountRef"
+    },
+    "JournalDebitLine.AccountRef.ListID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ListID",
+      "ParentPath": "JournalDebitLine.AccountRef"
+    },
+    "JournalDebitLine.Amount": {
+      "DataType": "decimal",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Amount",
+      "ParentPath": "JournalDebitLine"
+    },
+    "JournalDebitLine.BillableStatus": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "BillableStatus",
+      "ParentPath": "JournalDebitLine"
+    },
+    "JournalDebitLine.ClassRef": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ClassRef",
+      "ParentPath": "JournalDebitLine"
+    },
+    "JournalDebitLine.ClassRef.FullName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "FullName",
+      "ParentPath": "JournalDebitLine.ClassRef"
+    },
+    "JournalDebitLine.ClassRef.ListID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ListID",
+      "ParentPath": "JournalDebitLine.ClassRef"
+    },
+    "JournalDebitLine.EntityRef": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "EntityRef",
+      "ParentPath": "JournalDebitLine"
+    },
+    "JournalDebitLine.EntityRef.FullName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "FullName",
+      "ParentPath": "JournalDebitLine.EntityRef"
+    },
+    "JournalDebitLine.EntityRef.ListID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ListID",
+      "ParentPath": "JournalDebitLine.EntityRef"
+    },
+    "JournalDebitLine.ItemSalesTaxRef": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ItemSalesTaxRef",
+      "ParentPath": "JournalDebitLine"
+    },
+    "JournalDebitLine.ItemSalesTaxRef.FullName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "FullName",
+      "ParentPath": "JournalDebitLine.ItemSalesTaxRef"
+    },
+    "JournalDebitLine.ItemSalesTaxRef.ListID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ListID",
+      "ParentPath": "JournalDebitLine.ItemSalesTaxRef"
+    },
+    "JournalDebitLine.Memo": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Memo",
+      "ParentPath": "JournalDebitLine"
+    },
+    "JournalDebitLine.TxnLineID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "TxnLineID",
+      "ParentPath": "JournalDebitLine"
+    },
+    "RefNumber": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "RefNumber",
+      "ParentPath": ""
+    },
+    "TimeCreated": {
+      "DataType": "datetime",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "TimeCreated",
+      "ParentPath": ""
+    },
+    "TimeModified": {
+      "DataType": "datetime",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "TimeModified",
+      "ParentPath": ""
+    },
+    "TxnDate": {
+      "DataType": "date",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "TxnDate",
+      "ParentPath": ""
+    },
+    "TxnID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "TxnID",
+      "ParentPath": ""
+    },
+    "TxnNumber": {
+      "DataType": "integer",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "TxnNumber",
+      "ParentPath": ""
+    }
+  },
+  "GeneratedDate": "2024-10-30T18:54:17.528815-06:00",
+  "ReportType": "JournalEntry"
+}
