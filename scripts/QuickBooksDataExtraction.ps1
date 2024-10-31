@@ -16,7 +16,7 @@ param (
 $currentDate = Get-Date -Format "yyyyMMdd"
 $companyFilePaths = Get-Content "C:\Users\BenjaminW.admin\Developer\QBDataExtraction\CompanyFilePaths2.json" | ConvertFrom-Json
 $reportPath = "C:\Users\BenjaminW.admin\Documents\QBExractions\$currentDate"
-$reportTypes = @("Vendor", "Invoice", "SalesOrder", "PurchaseOrder", "Customer")
+$reportTypes = @("Vendor", "Invoice", "SalesOrder", "PurchaseOrder", "Account", "JournalEntry")
 $divisionsToProcess = 
     if ($Divisions -eq "All") {
         $companyFilePaths
@@ -131,7 +131,7 @@ foreach ($division in $divisionsToProcess) {
     foreach ($reportType in $reportsToProcess) {
         try {
             Write-Host "Attempting to get the $reportType report for $($division.Division)."
-            $XMLResponse = Get-Report -ReportType $($reportType) -QBXMLRp $qBComObject -Ticket $ticket -PriorDay
+            $XMLResponse = Get-Report -ReportType $($reportType) -QBXMLRp $qBComObject -Ticket $ticket -PriorDay -IncludeLineItems
             $CurrentDateTimeForExportFileName = Get-Date -Format "yyyyMMdd_HHmm"
             $OutputPath = Join-Path -Path $reportPath -ChildPath "test_${CurrentDateTimeForExportFileName}_$($division.Division)_$reportType.xml"
             Save-QBXMLFile -QBXMLData $XMLResponse -SavePath $OutputPath
