@@ -1,81 +1,13 @@
 {
+  "TotalRecords": null,
+  "ReportType": "PurchaseOrder",
   "Fields": {
-    "TermsRef": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "TermsRef",
-      "ParentPath": ""
-    },
-    "ClassRef.FullName": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "FullName",
-      "ParentPath": "ClassRef"
-    },
-    "ShipAddress.City": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "City",
-      "ParentPath": "ShipAddress"
-    },
-    "VendorAddressBlock.Addr4": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "Addr4",
-      "ParentPath": "VendorAddressBlock"
-    },
-    "ShipAddress.Addr4": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "Addr4",
-      "ParentPath": "ShipAddress"
-    },
-    "InventorySiteRef.FullName": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "FullName",
-      "ParentPath": "InventorySiteRef"
-    },
-    "DataExtRet.DataExtType": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "DataExtType",
-      "ParentPath": "DataExtRet"
-    },
-    "InventorySiteRef.ListID": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "ListID",
-      "ParentPath": "InventorySiteRef"
-    },
     "VendorAddressBlock.Addr2": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
       "Name": "Addr2",
       "ParentPath": "VendorAddressBlock"
-    },
-    "ShipAddress.Addr2": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "Addr2",
-      "ParentPath": "ShipAddress"
-    },
-    "DataExtRet.OwnerID": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "OwnerID",
-      "ParentPath": "DataExtRet"
     },
     "VendorAddressBlock.Addr3": {
       "DataType": "string",
@@ -84,53 +16,88 @@
       "Name": "Addr3",
       "ParentPath": "VendorAddressBlock"
     },
-    "VendorMsg": {
+    "ShipAddressBlock.Addr5": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
-      "Name": "VendorMsg",
-      "ParentPath": ""
+      "Name": "Addr5",
+      "ParentPath": "ShipAddressBlock"
     },
-    "TotalAmountInHomeCurrency": {
-      "DataType": "decimal",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "TotalAmountInHomeCurrency",
-      "ParentPath": ""
-    },
-    "InventorySiteRef": {
+    "ClassRef.ListID": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
-      "Name": "InventorySiteRef",
-      "ParentPath": ""
+      "Name": "ListID",
+      "ParentPath": "ClassRef"
     },
-    "LinkedTxn.LinkType": {
+    "VendorAddressBlock.Addr1": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
-      "Name": "LinkType",
-      "ParentPath": "LinkedTxn"
+      "Name": "Addr1",
+      "ParentPath": "VendorAddressBlock"
     },
-    "DataExtRet": {
+    "VendorAddress.Addr5": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
-      "Name": "DataExtRet",
+      "Name": "Addr5",
+      "ParentPath": "VendorAddress"
+    },
+    "TimeModified": {
+      "DataType": "datetime",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "TimeModified",
       "ParentPath": ""
+    },
+    "ExpectedDate": {
+      "DataType": "date",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ExpectedDate",
+      "ParentPath": ""
+    },
+    "EditSequence": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "EditSequence",
+      "ParentPath": ""
+    },
+    "DataExtRet.DataExtName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "DataExtName",
+      "ParentPath": "DataExtRet"
+    },
+    "ShipAddress.Addr4": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Addr4",
+      "ParentPath": "ShipAddress"
+    },
+    "VendorAddress.Addr4": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Addr4",
+      "ParentPath": "VendorAddress"
+    },
+    "VendorAddress.Addr3": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Addr3",
+      "ParentPath": "VendorAddress"
     },
     "FOB": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
       "Name": "FOB",
-      "ParentPath": ""
-    },
-    "TemplateRef": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "TemplateRef",
       "ParentPath": ""
     },
     "ShipAddress.State": {
@@ -140,20 +107,6 @@
       "Name": "State",
       "ParentPath": "ShipAddress"
     },
-    "VendorAddress.Addr2": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "Addr2",
-      "ParentPath": "VendorAddress"
-    },
-    "VendorAddressBlock.Addr5": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "Addr5",
-      "ParentPath": "VendorAddressBlock"
-    },
     "IsToBeEmailed": {
       "DataType": "boolean",
       "IsArray": false,
@@ -161,102 +114,39 @@
       "Name": "IsToBeEmailed",
       "ParentPath": ""
     },
-    "TermsRef.FullName": {
+    "LinkedTxn.LinkType": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
-      "Name": "FullName",
-      "ParentPath": "TermsRef"
-    },
-    "CurrencyRef.ListID": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "ListID",
-      "ParentPath": "CurrencyRef"
-    },
-    "SalesTaxCodeRef.ListID": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "ListID",
-      "ParentPath": "SalesTaxCodeRef"
-    },
-    "DataExtRet.DataExtValue": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "DataExtValue",
-      "ParentPath": "DataExtRet"
-    },
-    "VendorAddress.City": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "City",
-      "ParentPath": "VendorAddress"
-    },
-    "ExpectedDate": {
-      "DataType": "date",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "ExpectedDate",
-      "ParentPath": ""
-    },
-    "SalesTaxCodeRef.FullName": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "FullName",
-      "ParentPath": "SalesTaxCodeRef"
-    },
-    "SalesTaxCodeRef": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "SalesTaxCodeRef",
-      "ParentPath": ""
-    },
-    "TxnID": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "TxnID",
-      "ParentPath": ""
-    },
-    "LinkedTxn.TxnID": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "TxnID",
+      "Name": "LinkType",
       "ParentPath": "LinkedTxn"
     },
-    "VendorAddress.Addr3": {
+    "CurrencyRef.FullName": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
-      "Name": "Addr3",
+      "Name": "FullName",
+      "ParentPath": "CurrencyRef"
+    },
+    "ShipMethodRef.ListID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ListID",
+      "ParentPath": "ShipMethodRef"
+    },
+    "VendorAddress.Note": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Note",
       "ParentPath": "VendorAddress"
     },
-    "VendorRef.ListID": {
+    "DataExtRet.DataExtType": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
-      "Name": "ListID",
-      "ParentPath": "VendorRef"
-    },
-    "TemplateRef.ListID": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "ListID",
-      "ParentPath": "TemplateRef"
-    },
-    "DataExtRet.DataExtName": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "DataExtName",
+      "Name": "DataExtType",
       "ParentPath": "DataExtRet"
     },
     "VendorAddress.State": {
@@ -266,179 +156,11 @@
       "Name": "State",
       "ParentPath": "VendorAddress"
     },
-    "VendorAddress.Addr5": {
+    "Other2": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
-      "Name": "Addr5",
-      "ParentPath": "VendorAddress"
-    },
-    "ShipAddressBlock.Addr1": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "Addr1",
-      "ParentPath": "ShipAddressBlock"
-    },
-    "DueDate": {
-      "DataType": "date",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "DueDate",
-      "ParentPath": ""
-    },
-    "IsToBePrinted": {
-      "DataType": "boolean",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "IsToBePrinted",
-      "ParentPath": ""
-    },
-    "Other1": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "Other1",
-      "ParentPath": ""
-    },
-    "LinkedTxn.TxnDate": {
-      "DataType": "date",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "TxnDate",
-      "ParentPath": "LinkedTxn"
-    },
-    "VendorRef.FullName": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "FullName",
-      "ParentPath": "VendorRef"
-    },
-    "CurrencyRef": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "CurrencyRef",
-      "ParentPath": ""
-    },
-    "CurrencyRef.FullName": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "FullName",
-      "ParentPath": "CurrencyRef"
-    },
-    "ShipAddressBlock": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "ShipAddressBlock",
-      "ParentPath": ""
-    },
-    "VendorAddressBlock": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "VendorAddressBlock",
-      "ParentPath": ""
-    },
-    "ExchangeRate": {
-      "DataType": "float",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "ExchangeRate",
-      "ParentPath": ""
-    },
-    "ClassRef": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "ClassRef",
-      "ParentPath": ""
-    },
-    "ShipAddressBlock.Addr2": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "Addr2",
-      "ParentPath": "ShipAddressBlock"
-    },
-    "ShipAddress.Country": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "Country",
-      "ParentPath": "ShipAddress"
-    },
-    "TimeCreated": {
-      "DataType": "datetime",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "TimeCreated",
-      "ParentPath": ""
-    },
-    "ShipMethodRef": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "ShipMethodRef",
-      "ParentPath": ""
-    },
-    "TxnNumber": {
-      "DataType": "integer",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "TxnNumber",
-      "ParentPath": ""
-    },
-    "LinkedTxn.RefNumber": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "RefNumber",
-      "ParentPath": "LinkedTxn"
-    },
-    "EditSequence": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "EditSequence",
-      "ParentPath": ""
-    },
-    "LinkedTxn.TxnType": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "TxnType",
-      "ParentPath": "LinkedTxn"
-    },
-    "ShipAddress.Note": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "Note",
-      "ParentPath": "ShipAddress"
-    },
-    "IsManuallyClosed": {
-      "DataType": "boolean",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "IsManuallyClosed",
-      "ParentPath": ""
-    },
-    "TemplateRef.FullName": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "FullName",
-      "ParentPath": "TemplateRef"
-    },
-    "TxnDate": {
-      "DataType": "date",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "TxnDate",
+      "Name": "Other2",
       "ParentPath": ""
     },
     "ShipAddressBlock.Addr3": {
@@ -448,81 +170,74 @@
       "Name": "Addr3",
       "ParentPath": "ShipAddressBlock"
     },
-    "LinkedTxn": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "LinkedTxn",
-      "ParentPath": ""
-    },
-    "VendorAddress.Addr1": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "Addr1",
-      "ParentPath": "VendorAddress"
-    },
-    "VendorAddress.Addr4": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "Addr4",
-      "ParentPath": "VendorAddress"
-    },
-    "ExternalGUID": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "ExternalGUID",
-      "ParentPath": ""
-    },
-    "ShipAddress.Addr3": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "Addr3",
-      "ParentPath": "ShipAddress"
-    },
-    "TermsRef.ListID": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "ListID",
-      "ParentPath": "TermsRef"
-    },
-    "RefNumber": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "RefNumber",
-      "ParentPath": ""
-    },
-    "ShipAddress": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "ShipAddress",
-      "ParentPath": ""
-    },
-    "ShipToEntityRef.FullName": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "FullName",
-      "ParentPath": "ShipToEntityRef"
-    },
-    "ShipAddressBlock.Addr5": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "Addr5",
-      "ParentPath": "ShipAddressBlock"
-    },
     "TotalAmount": {
       "DataType": "decimal",
       "IsArray": false,
       "IsRequired": false,
       "Name": "TotalAmount",
+      "ParentPath": ""
+    },
+    "ShipAddress.Note": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Note",
+      "ParentPath": "ShipAddress"
+    },
+    "LinkedTxn.TxnID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "TxnID",
+      "ParentPath": "LinkedTxn"
+    },
+    "ShipAddressBlock.Addr2": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Addr2",
+      "ParentPath": "ShipAddressBlock"
+    },
+    "CurrencyRef.ListID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ListID",
+      "ParentPath": "CurrencyRef"
+    },
+    "IsToBePrinted": {
+      "DataType": "boolean",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "IsToBePrinted",
+      "ParentPath": ""
+    },
+    "ExchangeRate": {
+      "DataType": "float",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ExchangeRate",
+      "ParentPath": ""
+    },
+    "LinkedTxn.RefNumber": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "RefNumber",
+      "ParentPath": "LinkedTxn"
+    },
+    "InventorySiteRef.FullName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "FullName",
+      "ParentPath": "InventorySiteRef"
+    },
+    "TotalAmountInHomeCurrency": {
+      "DataType": "decimal",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "TotalAmountInHomeCurrency",
       "ParentPath": ""
     },
     "ShipAddress.Addr5": {
@@ -532,19 +247,12 @@
       "Name": "Addr5",
       "ParentPath": "ShipAddress"
     },
-    "ShipMethodRef.ListID": {
+    "VendorAddressBlock.Addr4": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
-      "Name": "ListID",
-      "ParentPath": "ShipMethodRef"
-    },
-    "IsTaxIncluded": {
-      "DataType": "boolean",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "IsTaxIncluded",
-      "ParentPath": ""
+      "Name": "Addr4",
+      "ParentPath": "VendorAddressBlock"
     },
     "VendorAddress.Country": {
       "DataType": "string",
@@ -553,33 +261,47 @@
       "Name": "Country",
       "ParentPath": "VendorAddress"
     },
-    "Other2": {
+    "VendorRef.FullName": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
-      "Name": "Other2",
+      "Name": "FullName",
+      "ParentPath": "VendorRef"
+    },
+    "Other1": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Other1",
       "ParentPath": ""
     },
-    "LinkedTxn.Amount": {
-      "DataType": "decimal",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "Amount",
-      "ParentPath": "LinkedTxn"
-    },
-    "VendorAddress": {
+    "RefNumber": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
-      "Name": "VendorAddress",
+      "Name": "RefNumber",
       "ParentPath": ""
     },
-    "VendorAddressBlock.Addr1": {
+    "ShipAddress.Addr3": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
-      "Name": "Addr1",
-      "ParentPath": "VendorAddressBlock"
+      "Name": "Addr3",
+      "ParentPath": "ShipAddress"
+    },
+    "TxnDate": {
+      "DataType": "date",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "TxnDate",
+      "ParentPath": ""
+    },
+    "DataExtRet.DataExtValue": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "DataExtValue",
+      "ParentPath": "DataExtRet"
     },
     "ShipToEntityRef.ListID": {
       "DataType": "string",
@@ -588,32 +310,151 @@
       "Name": "ListID",
       "ParentPath": "ShipToEntityRef"
     },
-    "ShipToEntityRef": {
+    "TermsRef.FullName": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
-      "Name": "ShipToEntityRef",
-      "ParentPath": ""
+      "Name": "FullName",
+      "ParentPath": "TermsRef"
     },
-    "Memo": {
+    "SalesTaxCodeRef.FullName": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
-      "Name": "Memo",
-      "ParentPath": ""
+      "Name": "FullName",
+      "ParentPath": "SalesTaxCodeRef"
     },
-    "VendorAddress.Note": {
+    "LinkedTxn.TxnType": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
-      "Name": "Note",
+      "Name": "TxnType",
+      "ParentPath": "LinkedTxn"
+    },
+    "VendorAddress.PostalCode": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "PostalCode",
       "ParentPath": "VendorAddress"
     },
-    "VendorRef": {
+    "IsManuallyClosed": {
+      "DataType": "boolean",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "IsManuallyClosed",
+      "ParentPath": ""
+    },
+    "VendorAddress.City": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
-      "Name": "VendorRef",
+      "Name": "City",
+      "ParentPath": "VendorAddress"
+    },
+    "VendorRef.ListID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ListID",
+      "ParentPath": "VendorRef"
+    },
+    "InventorySiteRef.ListID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ListID",
+      "ParentPath": "InventorySiteRef"
+    },
+    "IsTaxIncluded": {
+      "DataType": "boolean",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "IsTaxIncluded",
+      "ParentPath": ""
+    },
+    "VendorAddress.Addr1": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Addr1",
+      "ParentPath": "VendorAddress"
+    },
+    "ShipAddress.Addr2": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Addr2",
+      "ParentPath": "ShipAddress"
+    },
+    "TxnNumber": {
+      "DataType": "integer",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "TxnNumber",
+      "ParentPath": ""
+    },
+    "ShipAddressBlock.Addr1": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Addr1",
+      "ParentPath": "ShipAddressBlock"
+    },
+    "LinkedTxn.Amount": {
+      "DataType": "decimal",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Amount",
+      "ParentPath": "LinkedTxn"
+    },
+    "ShipAddress.PostalCode": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "PostalCode",
+      "ParentPath": "ShipAddress"
+    },
+    "DataExtRet.OwnerID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "OwnerID",
+      "ParentPath": "DataExtRet"
+    },
+    "LinkedTxn.TxnDate": {
+      "DataType": "date",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "TxnDate",
+      "ParentPath": "LinkedTxn"
+    },
+    "DueDate": {
+      "DataType": "date",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "DueDate",
+      "ParentPath": ""
+    },
+    "ClassRef.FullName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "FullName",
+      "ParentPath": "ClassRef"
+    },
+    "IsFullyReceived": {
+      "DataType": "boolean",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "IsFullyReceived",
+      "ParentPath": ""
+    },
+    "ExternalGUID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ExternalGUID",
       "ParentPath": ""
     },
     "ShipMethodRef.FullName": {
@@ -623,19 +464,40 @@
       "Name": "FullName",
       "ParentPath": "ShipMethodRef"
     },
-    "TimeModified": {
-      "DataType": "datetime",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "TimeModified",
-      "ParentPath": ""
-    },
-    "VendorAddress.PostalCode": {
+    "TxnID": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
-      "Name": "PostalCode",
-      "ParentPath": "VendorAddress"
+      "Name": "TxnID",
+      "ParentPath": ""
+    },
+    "Memo": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Memo",
+      "ParentPath": ""
+    },
+    "TemplateRef.FullName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "FullName",
+      "ParentPath": "TemplateRef"
+    },
+    "ShipAddress.City": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "City",
+      "ParentPath": "ShipAddress"
+    },
+    "ShipToEntityRef.FullName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "FullName",
+      "ParentPath": "ShipToEntityRef"
     },
     "ShipAddress.Addr1": {
       "DataType": "string",
@@ -644,29 +506,33 @@
       "Name": "Addr1",
       "ParentPath": "ShipAddress"
     },
-    "TestFieldKey": {
-      "TestFieldKeySub1": "TestFieldKeSub1Value"
-    },
-    "IsFullyReceived": {
-      "DataType": "boolean",
+    "TimeCreated": {
+      "DataType": "datetime",
       "IsArray": false,
       "IsRequired": false,
-      "Name": "IsFullyReceived",
+      "Name": "TimeCreated",
       "ParentPath": ""
     },
-    "ShipAddress.PostalCode": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "PostalCode",
-      "ParentPath": "ShipAddress"
-    },
-    "ClassRef.ListID": {
+    "TermsRef.ListID": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
       "Name": "ListID",
-      "ParentPath": "ClassRef"
+      "ParentPath": "TermsRef"
+    },
+    "VendorAddressBlock.Addr5": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Addr5",
+      "ParentPath": "VendorAddressBlock"
+    },
+    "TemplateRef.ListID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ListID",
+      "ParentPath": "TemplateRef"
     },
     "ShipAddressBlock.Addr4": {
       "DataType": "string",
@@ -674,8 +540,34 @@
       "IsRequired": false,
       "Name": "Addr4",
       "ParentPath": "ShipAddressBlock"
+    },
+    "SalesTaxCodeRef.ListID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ListID",
+      "ParentPath": "SalesTaxCodeRef"
+    },
+    "ShipAddress.Country": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Country",
+      "ParentPath": "ShipAddress"
+    },
+    "VendorAddress.Addr2": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Addr2",
+      "ParentPath": "VendorAddress"
+    },
+    "VendorMsg": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "VendorMsg",
+      "ParentPath": ""
     }
-  },
-  "TotalRecords": null,
-  "ReportType": "PurchaseOrder"
+  }
 }

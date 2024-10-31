@@ -1,178 +1,12 @@
 {
+  "TotalRecords": null,
+  "ReportType": "SalesOrder",
   "Fields": {
-    "SalesOrderLineRet.OverrideUOMSetRef": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "OverrideUOMSetRef",
-      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet"
-    },
-    "Desc": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "Desc",
-      "ParentPath": "SalesOrderLineGroupRet"
-    },
-    "Quantity": {
-      "DataType": "decimal",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "Quantity",
-      "ParentPath": "SalesOrderLineGroupRet"
-    },
     "SalesOrderLineRet.Desc": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
       "Name": "Desc",
-      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet"
-    },
-    "ItemGroupRef.FullName": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "FullName",
-      "ParentPath": "SalesOrderLineGroupRet.ItemGroupRef"
-    },
-    "SalesOrderLineRet.ClassRef.FullName": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "FullName",
-      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet.ClassRef"
-    },
-    "SalesOrderLineRet.DataExtRet.DataExtType": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "DataExtType",
-      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet.DataExtRet"
-    },
-    "SalesOrderLineRet.Amount": {
-      "DataType": "decimal",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "Amount",
-      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet"
-    },
-    "ItemGroupRef.ListID": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "ListID",
-      "ParentPath": "SalesOrderLineGroupRet.ItemGroupRef"
-    },
-    "DataExtRet.DataExtType": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "DataExtType",
-      "ParentPath": "SalesOrderLineGroupRet.DataExtRet"
-    },
-    "SalesOrderLineRet.OverrideUOMSetRef.FullName": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "FullName",
-      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet.OverrideUOMSetRef"
-    },
-    "SalesOrderLineRet.SalesTaxCodeRef.ListID": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "ListID",
-      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet.SalesTaxCodeRef"
-    },
-    "SalesOrderLineRet.Invoiced": {
-      "DataType": "decimal",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "Invoiced",
-      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet"
-    },
-    "SalesOrderLineRet.Other1": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "Other1",
-      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet"
-    },
-    "SalesOrderLineRet.ClassRef.ListID": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "ListID",
-      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet.ClassRef"
-    },
-    "TotalAmount": {
-      "DataType": "decimal",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "TotalAmount",
-      "ParentPath": "SalesOrderLineGroupRet"
-    },
-    "SalesOrderLineRet.Quantity": {
-      "DataType": "decimal",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "Quantity",
-      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet"
-    },
-    "OverrideUOMSetRef": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "OverrideUOMSetRef",
-      "ParentPath": "SalesOrderLineGroupRet"
-    },
-    "SalesOrderLineRet.TxnLineID": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "TxnLineID",
-      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet"
-    },
-    "SalesOrderLineRet.InventorySiteLocationRef": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "InventorySiteLocationRef",
-      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet"
-    },
-    "SalesOrderLineRet.LotNumber": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "LotNumber",
-      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet"
-    },
-    "DataExtRet.DataExtValue": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "DataExtValue",
-      "ParentPath": "SalesOrderLineGroupRet.DataExtRet"
-    },
-    "OverrideUOMSetRef.ListID": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "ListID",
-      "ParentPath": "SalesOrderLineGroupRet.OverrideUOMSetRef"
-    },
-    "SalesOrderLineRet": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "SalesOrderLineRet",
-      "ParentPath": "SalesOrderLineGroupRet"
-    },
-    "SalesOrderLineRet.ExpirationDateForSerialLotNumber": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "ExpirationDateForSerialLotNumber",
       "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet"
     },
     "SalesOrderLineRet.SalesTaxCodeRef.FullName": {
@@ -182,6 +16,139 @@
       "Name": "FullName",
       "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet.SalesTaxCodeRef"
     },
+    "SalesOrderLineRet.RatePercent": {
+      "DataType": "float",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "RatePercent",
+      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet"
+    },
+    "SalesOrderLineRet.Rate": {
+      "DataType": "decimal",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Rate",
+      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet"
+    },
+    "SalesOrderLineRet.InventorySiteRef.FullName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "FullName",
+      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet.InventorySiteRef"
+    },
+    "SalesOrderLineRet.Other2": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Other2",
+      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet"
+    },
+    "SalesOrderLineRet.DataExtRet.DataExtType": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "DataExtType",
+      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet.DataExtRet"
+    },
+    "ItemGroupRef.FullName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "FullName",
+      "ParentPath": "SalesOrderLineGroupRet.ItemGroupRef"
+    },
+    "SalesOrderLineRet.IsManuallyClosed": {
+      "DataType": "boolean",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "IsManuallyClosed",
+      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet"
+    },
+    "SalesOrderLineRet.Amount": {
+      "DataType": "decimal",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Amount",
+      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet"
+    },
+    "SalesOrderLineRet.ItemRef.FullName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "FullName",
+      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet.ItemRef"
+    },
+    "SalesOrderLineRet.LotNumber": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "LotNumber",
+      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet"
+    },
+    "SalesOrderLineRet.ExpirationDateForSerialLotNumber": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ExpirationDateForSerialLotNumber",
+      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet"
+    },
+    "ItemGroupRef.ListID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ListID",
+      "ParentPath": "SalesOrderLineGroupRet.ItemGroupRef"
+    },
+    "SalesOrderLineRet.InventorySiteLocationRef.ListID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ListID",
+      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet.InventorySiteLocationRef"
+    },
+    "SalesOrderLineRet.ClassRef.ListID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ListID",
+      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet.ClassRef"
+    },
+    "Quantity": {
+      "DataType": "decimal",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Quantity",
+      "ParentPath": "SalesOrderLineGroupRet"
+    },
+    "SalesOrderLineRet.ItemRef.ListID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ListID",
+      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet.ItemRef"
+    },
+    "SalesOrderLineRet.ClassRef.FullName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "FullName",
+      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet.ClassRef"
+    },
+    "DataExtRet.DataExtName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "DataExtName",
+      "ParentPath": "SalesOrderLineGroupRet.DataExtRet"
+    },
+    "SalesOrderLineRet.UnitOfMeasure": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "UnitOfMeasure",
+      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet"
+    },
     "OverrideUOMSetRef.FullName": {
       "DataType": "string",
       "IsArray": false,
@@ -189,11 +156,74 @@
       "Name": "FullName",
       "ParentPath": "SalesOrderLineGroupRet.OverrideUOMSetRef"
     },
-    "UnitOfMeasure": {
+    "DataExtRet.OwnerID": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
-      "Name": "UnitOfMeasure",
+      "Name": "OwnerID",
+      "ParentPath": "SalesOrderLineGroupRet.DataExtRet"
+    },
+    "SalesOrderLineRet.InventorySiteRef.ListID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ListID",
+      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet.InventorySiteRef"
+    },
+    "IsPrintItemsInGroup": {
+      "DataType": "boolean",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "IsPrintItemsInGroup",
+      "ParentPath": "SalesOrderLineGroupRet"
+    },
+    "SalesOrderLineRet.Other1": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Other1",
+      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet"
+    },
+    "TxnLineID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "TxnLineID",
+      "ParentPath": "SalesOrderLineGroupRet"
+    },
+    "SalesOrderLineRet.TxnLineID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "TxnLineID",
+      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet"
+    },
+    "SalesOrderLineRet.Quantity": {
+      "DataType": "decimal",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Quantity",
+      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet"
+    },
+    "SalesOrderLineRet.OverrideUOMSetRef.FullName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "FullName",
+      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet.OverrideUOMSetRef"
+    },
+    "SalesOrderLineRet.Invoiced": {
+      "DataType": "decimal",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Invoiced",
+      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet"
+    },
+    "TotalAmount": {
+      "DataType": "decimal",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "TotalAmount",
       "ParentPath": "SalesOrderLineGroupRet"
     },
     "SalesOrderLineRet.DataExtRet.DataExtValue": {
@@ -203,75 +233,12 @@
       "Name": "DataExtValue",
       "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet.DataExtRet"
     },
-    "SalesOrderLineRet.ClassRef": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "ClassRef",
-      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet"
-    },
-    "IsPrintItemsInGroup": {
-      "DataType": "boolean",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "IsPrintItemsInGroup",
-      "ParentPath": "SalesOrderLineGroupRet"
-    },
-    "SalesOrderLineRet.SalesTaxCodeRef": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "SalesTaxCodeRef",
-      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet"
-    },
-    "SalesOrderLineRet.InventorySiteLocationRef.ListID": {
+    "OverrideUOMSetRef.ListID": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
       "Name": "ListID",
-      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet.InventorySiteLocationRef"
-    },
-    "SalesOrderLineRet.DataExtRet.DataExtName": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "DataExtName",
-      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet.DataExtRet"
-    },
-    "TxnLineID": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "TxnLineID",
-      "ParentPath": "SalesOrderLineGroupRet"
-    },
-    "SalesOrderLineRet.ItemRef.FullName": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "FullName",
-      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet.ItemRef"
-    },
-    "SalesOrderLineRet.InventorySiteRef.FullName": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "FullName",
-      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet.InventorySiteRef"
-    },
-    "SalesOrderLineRet.InventorySiteLocationRef.FullName": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "FullName",
-      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet.InventorySiteLocationRef"
-    },
-    "SalesOrderLineRet.Rate": {
-      "DataType": "decimal",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "Rate",
-      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet"
+      "ParentPath": "SalesOrderLineGroupRet.OverrideUOMSetRef"
     },
     "SalesOrderLineRet.OverrideUOMSetRef.ListID": {
       "DataType": "string",
@@ -280,33 +247,47 @@
       "Name": "ListID",
       "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet.OverrideUOMSetRef"
     },
-    "SalesOrderLineRet.Other2": {
+    "SalesOrderLineRet.SerialNumber": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
-      "Name": "Other2",
+      "Name": "SerialNumber",
       "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet"
     },
-    "SalesOrderLineRet.RatePercent": {
-      "DataType": "float",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "RatePercent",
-      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet"
-    },
-    "ItemGroupRef": {
+    "UnitOfMeasure": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
-      "Name": "ItemGroupRef",
+      "Name": "UnitOfMeasure",
       "ParentPath": "SalesOrderLineGroupRet"
     },
-    "DataExtRet.OwnerID": {
+    "SalesOrderLineRet.SalesTaxCodeRef.ListID": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
-      "Name": "OwnerID",
+      "Name": "ListID",
+      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet.SalesTaxCodeRef"
+    },
+    "DataExtRet.DataExtValue": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "DataExtValue",
       "ParentPath": "SalesOrderLineGroupRet.DataExtRet"
+    },
+    "Desc": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Desc",
+      "ParentPath": "SalesOrderLineGroupRet"
+    },
+    "SalesOrderLineRet.InventorySiteLocationRef.FullName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "FullName",
+      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet.InventorySiteLocationRef"
     },
     "SalesOrderLineRet.DataExtRet.OwnerID": {
       "DataType": "string",
@@ -315,77 +296,19 @@
       "Name": "OwnerID",
       "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet.DataExtRet"
     },
-    "SalesOrderLineRet.DataExtRet": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "DataExtRet",
-      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet"
-    },
-    "SalesOrderLineRet.UnitOfMeasure": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "UnitOfMeasure",
-      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet"
-    },
-    "SalesOrderLineRet.InventorySiteRef.ListID": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "ListID",
-      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet.InventorySiteRef"
-    },
-    "DataExtRet": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "DataExtRet",
-      "ParentPath": "SalesOrderLineGroupRet"
-    },
-    "DataExtRet.DataExtName": {
+    "SalesOrderLineRet.DataExtRet.DataExtName": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
       "Name": "DataExtName",
+      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet.DataExtRet"
+    },
+    "DataExtRet.DataExtType": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "DataExtType",
       "ParentPath": "SalesOrderLineGroupRet.DataExtRet"
-    },
-    "SalesOrderLineRet.ItemRef.ListID": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "ListID",
-      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet.ItemRef"
-    },
-    "SalesOrderLineRet.InventorySiteRef": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "InventorySiteRef",
-      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet"
-    },
-    "SalesOrderLineRet.ItemRef": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "ItemRef",
-      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet"
-    },
-    "SalesOrderLineRet.SerialNumber": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "SerialNumber",
-      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet"
-    },
-    "SalesOrderLineRet.IsManuallyClosed": {
-      "DataType": "boolean",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "IsManuallyClosed",
-      "ParentPath": "SalesOrderLineGroupRet.SalesOrderLineRet"
     }
-  },
-  "TotalRecords": null,
-  "ReportType": "SalesOrder"
+  }
 }

@@ -1,53 +1,27 @@
 {
+  "TotalRecords": null,
+  "ReportType": "SalesOrder",
   "Fields": {
-    "TermsRef": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "TermsRef",
-      "ParentPath": ""
-    },
-    "BillAddress.Note": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "Note",
-      "ParentPath": "BillAddress"
-    },
-    "BillAddress.Addr4": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "Addr4",
-      "ParentPath": "BillAddress"
-    },
-    "ClassRef.FullName": {
+    "SalesRepRef.FullName": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
       "Name": "FullName",
-      "ParentPath": "ClassRef"
+      "ParentPath": "SalesRepRef"
     },
-    "ShipAddress.City": {
+    "BillAddress.City": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
       "Name": "City",
-      "ParentPath": "ShipAddress"
+      "ParentPath": "BillAddress"
     },
-    "CustomerMsgRef.FullName": {
+    "ShipAddressBlock.Addr5": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
-      "Name": "FullName",
-      "ParentPath": "CustomerMsgRef"
-    },
-    "ShipAddress.Addr4": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "Addr4",
-      "ParentPath": "ShipAddress"
+      "Name": "Addr5",
+      "ParentPath": "ShipAddressBlock"
     },
     "BillAddress.State": {
       "DataType": "string",
@@ -56,33 +30,82 @@
       "Name": "State",
       "ParentPath": "BillAddress"
     },
-    "DataExtRet.DataExtType": {
+    "ItemSalesTaxRef.FullName": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
-      "Name": "DataExtType",
+      "Name": "FullName",
+      "ParentPath": "ItemSalesTaxRef"
+    },
+    "BillAddress.Note": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Note",
+      "ParentPath": "BillAddress"
+    },
+    "ShippingDetails.ShippingDetailsLineRet.CarrierName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "CarrierName",
+      "ParentPath": "ShippingDetails.ShippingDetailsLineRet"
+    },
+    "IsTaxIncluded": {
+      "DataType": "boolean",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "IsTaxIncluded",
+      "ParentPath": ""
+    },
+    "IsFullyInvoiced": {
+      "DataType": "boolean",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "IsFullyInvoiced",
+      "ParentPath": ""
+    },
+    "EditSequence": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "EditSequence",
+      "ParentPath": ""
+    },
+    "DataExtRet.DataExtName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "DataExtName",
       "ParentPath": "DataExtRet"
     },
-    "ShipAddress.Addr2": {
+    "ShipAddress.Addr4": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Addr4",
+      "ParentPath": "ShipAddress"
+    },
+    "BillAddressBlock.Addr2": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
       "Name": "Addr2",
-      "ParentPath": "ShipAddress"
+      "ParentPath": "BillAddressBlock"
     },
-    "DataExtRet.OwnerID": {
+    "StoreName": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
-      "Name": "OwnerID",
-      "ParentPath": "DataExtRet"
+      "Name": "StoreName",
+      "ParentPath": ""
     },
-    "BillAddress.Addr1": {
+    "SalesRepRef.ListID": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
-      "Name": "Addr1",
-      "ParentPath": "BillAddress"
+      "Name": "ListID",
+      "ParentPath": "SalesRepRef"
     },
     "ItemSalesTaxRef.ListID": {
       "DataType": "string",
@@ -91,25 +114,25 @@
       "Name": "ListID",
       "ParentPath": "ItemSalesTaxRef"
     },
-    "ItemSalesTaxRef": {
+    "FOB": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
-      "Name": "ItemSalesTaxRef",
+      "Name": "FOB",
       "ParentPath": ""
     },
-    "TotalAmountInHomeCurrency": {
-      "DataType": "decimal",
+    "ShipAddress.State": {
+      "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
-      "Name": "TotalAmountInHomeCurrency",
-      "ParentPath": ""
+      "Name": "State",
+      "ParentPath": "ShipAddress"
     },
-    "TxnDate": {
-      "DataType": "date",
+    "IsToBeEmailed": {
+      "DataType": "boolean",
       "IsArray": false,
       "IsRequired": false,
-      "Name": "TxnDate",
+      "Name": "IsToBeEmailed",
       "ParentPath": ""
     },
     "LinkedTxn.LinkType": {
@@ -119,54 +142,54 @@
       "Name": "LinkType",
       "ParentPath": "LinkedTxn"
     },
-    "DataExtRet": {
+    "CurrencyRef.FullName": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
-      "Name": "DataExtRet",
+      "Name": "FullName",
+      "ParentPath": "CurrencyRef"
+    },
+    "Other": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Other",
       "ParentPath": ""
     },
-    "CustomerSalesTaxCodeRef.ListID": {
+    "DataExtRet.DataExtType": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
-      "Name": "ListID",
-      "ParentPath": "CustomerSalesTaxCodeRef"
+      "Name": "DataExtType",
+      "ParentPath": "DataExtRet"
     },
-    "TemplateRef": {
+    "BillAddressBlock.Addr1": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
-      "Name": "TemplateRef",
+      "Name": "Addr1",
+      "ParentPath": "BillAddressBlock"
+    },
+    "ShipAddressBlock.Addr3": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Addr3",
+      "ParentPath": "ShipAddressBlock"
+    },
+    "TotalAmount": {
+      "DataType": "decimal",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "TotalAmount",
       "ParentPath": ""
     },
-    "ShipDate": {
-      "DataType": "date",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "ShipDate",
-      "ParentPath": ""
-    },
-    "ShippingDetails.ShippingDetailsLineRet.TrackingID": {
+    "ShipAddress.Note": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
-      "Name": "TrackingID",
-      "ParentPath": "ShippingDetails.ShippingDetailsLineRet"
-    },
-    "ShipAddress.State": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "State",
+      "Name": "Note",
       "ParentPath": "ShipAddress"
-    },
-    "ShippingDetails.ShippingDetailsLineRet.ShippingMethod": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "ShippingMethod",
-      "ParentPath": "ShippingDetails.ShippingDetailsLineRet"
     },
     "ClassRef.ListID": {
       "DataType": "string",
@@ -175,75 +198,12 @@
       "Name": "ListID",
       "ParentPath": "ClassRef"
     },
-    "TermsRef.FullName": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "FullName",
-      "ParentPath": "TermsRef"
-    },
-    "CurrencyRef.ListID": {
+    "CustomerMsgRef.ListID": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
       "Name": "ListID",
-      "ParentPath": "CurrencyRef"
-    },
-    "DataExtRet.DataExtValue": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "DataExtValue",
-      "ParentPath": "DataExtRet"
-    },
-    "BillAddress.Addr3": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "Addr3",
-      "ParentPath": "BillAddress"
-    },
-    "ShippingDetails.ShippingDetailsLineRet.ShippingCharges": {
-      "DataType": "decimal",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "ShippingCharges",
-      "ParentPath": "ShippingDetails.ShippingDetailsLineRet"
-    },
-    "BillAddressBlock.Addr4": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "Addr4",
-      "ParentPath": "BillAddressBlock"
-    },
-    "BillAddressBlock.Addr3": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "Addr3",
-      "ParentPath": "BillAddressBlock"
-    },
-    "ShipAddressBlock": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "ShipAddressBlock",
-      "ParentPath": ""
-    },
-    "TxnID": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "TxnID",
-      "ParentPath": ""
-    },
-    "SalesTaxTotal": {
-      "DataType": "decimal",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "SalesTaxTotal",
-      "ParentPath": ""
+      "ParentPath": "CustomerMsgRef"
     },
     "LinkedTxn.TxnID": {
       "DataType": "string",
@@ -252,46 +212,179 @@
       "Name": "TxnID",
       "ParentPath": "LinkedTxn"
     },
-    "CustomerRef.FullName": {
+    "SalesTaxPercentage": {
+      "DataType": "float",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "SalesTaxPercentage",
+      "ParentPath": ""
+    },
+    "CustomerRef.ListID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ListID",
+      "ParentPath": "CustomerRef"
+    },
+    "CurrencyRef.ListID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ListID",
+      "ParentPath": "CurrencyRef"
+    },
+    "ShipDate": {
+      "DataType": "date",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ShipDate",
+      "ParentPath": ""
+    },
+    "IsToBePrinted": {
+      "DataType": "boolean",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "IsToBePrinted",
+      "ParentPath": ""
+    },
+    "ExchangeRate": {
+      "DataType": "float",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ExchangeRate",
+      "ParentPath": ""
+    },
+    "LinkedTxn.RefNumber": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "RefNumber",
+      "ParentPath": "LinkedTxn"
+    },
+    "TxnNumber": {
+      "DataType": "integer",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "TxnNumber",
+      "ParentPath": ""
+    },
+    "ShipAddressBlock.Addr2": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Addr2",
+      "ParentPath": "ShipAddressBlock"
+    },
+    "BillAddressBlock.Addr5": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Addr5",
+      "ParentPath": "BillAddressBlock"
+    },
+    "TotalAmountInHomeCurrency": {
+      "DataType": "decimal",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "TotalAmountInHomeCurrency",
+      "ParentPath": ""
+    },
+    "ShipAddress.Addr5": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Addr5",
+      "ParentPath": "ShipAddress"
+    },
+    "BillAddress.Addr4": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Addr4",
+      "ParentPath": "BillAddress"
+    },
+    "RefNumber": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "RefNumber",
+      "ParentPath": ""
+    },
+    "FulfillmentStatus": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "FulfillmentStatus",
+      "ParentPath": ""
+    },
+    "BillAddress.Country": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Country",
+      "ParentPath": "BillAddress"
+    },
+    "DataExtRet.DataExtValue": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "DataExtValue",
+      "ParentPath": "DataExtRet"
+    },
+    "ShipAddress.Addr3": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Addr3",
+      "ParentPath": "ShipAddress"
+    },
+    "TermsRef.FullName": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
       "Name": "FullName",
-      "ParentPath": "CustomerRef"
+      "ParentPath": "TermsRef"
     },
-    "SalesRepRef": {
+    "PONumber": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
-      "Name": "SalesRepRef",
+      "Name": "PONumber",
       "ParentPath": ""
     },
-    "CustomerMsgRef.ListID": {
+    "ShipAddress.Country": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
-      "Name": "ListID",
-      "ParentPath": "CustomerMsgRef"
+      "Name": "Country",
+      "ParentPath": "ShipAddress"
     },
-    "SalesRepRef.ListID": {
+    "SalesTaxTotal": {
+      "DataType": "decimal",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "SalesTaxTotal",
+      "ParentPath": ""
+    },
+    "BillAddress.Addr2": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
-      "Name": "ListID",
-      "ParentPath": "SalesRepRef"
+      "Name": "Addr2",
+      "ParentPath": "BillAddress"
     },
-    "DataExtRet.DataExtName": {
+    "LinkedTxn.TxnType": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
-      "Name": "DataExtName",
-      "ParentPath": "DataExtRet"
+      "Name": "TxnType",
+      "ParentPath": "LinkedTxn"
     },
-    "IsToBeEmailed": {
+    "IsManuallyClosed": {
       "DataType": "boolean",
       "IsArray": false,
       "IsRequired": false,
-      "Name": "IsToBeEmailed",
+      "Name": "IsManuallyClosed",
       "ParentPath": ""
     },
     "BillAddress.PostalCode": {
@@ -300,6 +393,41 @@
       "IsRequired": false,
       "Name": "PostalCode",
       "ParentPath": "BillAddress"
+    },
+    "ShipMethodRef.ListID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ListID",
+      "ParentPath": "ShipMethodRef"
+    },
+    "ShipAddressBlock.Addr4": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Addr4",
+      "ParentPath": "ShipAddressBlock"
+    },
+    "BillAddressBlock.Addr3": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Addr3",
+      "ParentPath": "BillAddressBlock"
+    },
+    "ShipAddress.Addr2": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Addr2",
+      "ParentPath": "ShipAddress"
+    },
+    "TxnDate": {
+      "DataType": "date",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "TxnDate",
+      "ParentPath": ""
     },
     "ShipAddressBlock.Addr1": {
       "DataType": "string",
@@ -315,194 +443,12 @@
       "Name": "FullName",
       "ParentPath": "CustomerSalesTaxCodeRef"
     },
-    "DueDate": {
-      "DataType": "date",
+    "SOChannel": {
+      "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
-      "Name": "DueDate",
+      "Name": "SOChannel",
       "ParentPath": ""
-    },
-    "IsToBePrinted": {
-      "DataType": "boolean",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "IsToBePrinted",
-      "ParentPath": ""
-    },
-    "Other": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "Other",
-      "ParentPath": ""
-    },
-    "BillAddress.City": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "City",
-      "ParentPath": "BillAddress"
-    },
-    "ShipAddress.Country": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "Country",
-      "ParentPath": "ShipAddress"
-    },
-    "LinkedTxn.TxnDate": {
-      "DataType": "date",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "TxnDate",
-      "ParentPath": "LinkedTxn"
-    },
-    "CurrencyRef": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "CurrencyRef",
-      "ParentPath": ""
-    },
-    "CurrencyRef.FullName": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "FullName",
-      "ParentPath": "CurrencyRef"
-    },
-    "LinkedTxn.TxnType": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "TxnType",
-      "ParentPath": "LinkedTxn"
-    },
-    "CustomerRef": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "CustomerRef",
-      "ParentPath": ""
-    },
-    "BillAddressBlock.Addr2": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "Addr2",
-      "ParentPath": "BillAddressBlock"
-    },
-    "BillAddress": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "BillAddress",
-      "ParentPath": ""
-    },
-    "CustomerSalesTaxCodeRef": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "CustomerSalesTaxCodeRef",
-      "ParentPath": ""
-    },
-    "ExchangeRate": {
-      "DataType": "float",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "ExchangeRate",
-      "ParentPath": ""
-    },
-    "ClassRef": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "ClassRef",
-      "ParentPath": ""
-    },
-    "ShipAddressBlock.Addr2": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "Addr2",
-      "ParentPath": "ShipAddressBlock"
-    },
-    "TemplateRef.ListID": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "ListID",
-      "ParentPath": "TemplateRef"
-    },
-    "BillAddress.Country": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "Country",
-      "ParentPath": "BillAddress"
-    },
-    "ShippingDetails": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "ShippingDetails",
-      "ParentPath": ""
-    },
-    "TimeCreated": {
-      "DataType": "datetime",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "TimeCreated",
-      "ParentPath": ""
-    },
-    "SalesRepRef.FullName": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "FullName",
-      "ParentPath": "SalesRepRef"
-    },
-    "PONumber": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "PONumber",
-      "ParentPath": ""
-    },
-    "BillAddress.Addr2": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "Addr2",
-      "ParentPath": "BillAddress"
-    },
-    "TxnNumber": {
-      "DataType": "integer",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "TxnNumber",
-      "ParentPath": ""
-    },
-    "ShippingDetails.ShippingDetailsLineRet.CarrierName": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "CarrierName",
-      "ParentPath": "ShippingDetails.ShippingDetailsLineRet"
-    },
-    "StoreName": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "StoreName",
-      "ParentPath": ""
-    },
-    "CustomerRef.ListID": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "ListID",
-      "ParentPath": "CustomerRef"
     },
     "TimeModified": {
       "DataType": "datetime",
@@ -511,11 +457,46 @@
       "Name": "TimeModified",
       "ParentPath": ""
     },
-    "EditSequence": {
+    "LinkedTxn.Amount": {
+      "DataType": "decimal",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Amount",
+      "ParentPath": "LinkedTxn"
+    },
+    "ShipAddress.PostalCode": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
-      "Name": "EditSequence",
+      "Name": "PostalCode",
+      "ParentPath": "ShipAddress"
+    },
+    "DataExtRet.OwnerID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "OwnerID",
+      "ParentPath": "DataExtRet"
+    },
+    "ShippingDetails.ShippingDetailsLineRet.ShippingCharges": {
+      "DataType": "decimal",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ShippingCharges",
+      "ParentPath": "ShippingDetails.ShippingDetailsLineRet"
+    },
+    "LinkedTxn.TxnDate": {
+      "DataType": "date",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "TxnDate",
+      "ParentPath": "LinkedTxn"
+    },
+    "DueDate": {
+      "DataType": "date",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "DueDate",
       "ParentPath": ""
     },
     "BillAddress.Addr5": {
@@ -525,39 +506,25 @@
       "Name": "Addr5",
       "ParentPath": "BillAddress"
     },
-    "LinkedTxn.RefNumber": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "RefNumber",
-      "ParentPath": "LinkedTxn"
-    },
-    "ShipAddress.Note": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "Note",
-      "ParentPath": "ShipAddress"
-    },
-    "IsManuallyClosed": {
-      "DataType": "boolean",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "IsManuallyClosed",
-      "ParentPath": ""
-    },
-    "TemplateRef.FullName": {
+    "ClassRef.FullName": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
       "Name": "FullName",
-      "ParentPath": "TemplateRef"
+      "ParentPath": "ClassRef"
     },
-    "FulfillmentStatus": {
+    "BillAddress.Addr3": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
-      "Name": "FulfillmentStatus",
+      "Name": "Addr3",
+      "ParentPath": "BillAddress"
+    },
+    "ExternalGUID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ExternalGUID",
       "ParentPath": ""
     },
     "StoreType": {
@@ -567,165 +534,25 @@
       "Name": "StoreType",
       "ParentPath": ""
     },
-    "ShipAddressBlock.Addr3": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "Addr3",
-      "ParentPath": "ShipAddressBlock"
-    },
-    "BillAddressBlock": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "BillAddressBlock",
-      "ParentPath": ""
-    },
-    "ShippingDetails.ShippingDetailsLineRet": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "ShippingDetailsLineRet",
-      "ParentPath": "ShippingDetails"
-    },
-    "BillAddressBlock.Addr1": {
+    "BillAddress.Addr1": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
       "Name": "Addr1",
-      "ParentPath": "BillAddressBlock"
+      "ParentPath": "BillAddress"
     },
-    "ExternalGUID": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "ExternalGUID",
-      "ParentPath": ""
-    },
-    "ShipAddress.Addr3": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "Addr3",
-      "ParentPath": "ShipAddress"
-    },
-    "RefNumber": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "RefNumber",
-      "ParentPath": ""
-    },
-    "ShipMethodRef": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "ShipMethodRef",
-      "ParentPath": ""
-    },
-    "BillAddressBlock.Addr5": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "Addr5",
-      "ParentPath": "BillAddressBlock"
-    },
-    "FOB": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "FOB",
-      "ParentPath": ""
-    },
-    "IsFullyInvoiced": {
-      "DataType": "boolean",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "IsFullyInvoiced",
-      "ParentPath": ""
-    },
-    "ShipAddressBlock.Addr5": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "Addr5",
-      "ParentPath": "ShipAddressBlock"
-    },
-    "TotalAmount": {
-      "DataType": "decimal",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "TotalAmount",
-      "ParentPath": ""
-    },
-    "LinkedTxn": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "LinkedTxn",
-      "ParentPath": ""
-    },
-    "ShipMethodRef.ListID": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "ListID",
-      "ParentPath": "ShipMethodRef"
-    },
-    "IsTaxIncluded": {
-      "DataType": "boolean",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "IsTaxIncluded",
-      "ParentPath": ""
-    },
-    "TermsRef.ListID": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "ListID",
-      "ParentPath": "TermsRef"
-    },
-    "LinkedTxn.Amount": {
-      "DataType": "decimal",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "Amount",
-      "ParentPath": "LinkedTxn"
-    },
-    "ShipAddress.Addr5": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "Addr5",
-      "ParentPath": "ShipAddress"
-    },
-    "SOChannel": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "SOChannel",
-      "ParentPath": ""
-    },
-    "SalesTaxPercentage": {
-      "DataType": "float",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "SalesTaxPercentage",
-      "ParentPath": ""
-    },
-    "ItemSalesTaxRef.FullName": {
+    "ShipMethodRef.FullName": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
       "Name": "FullName",
-      "ParentPath": "ItemSalesTaxRef"
+      "ParentPath": "ShipMethodRef"
     },
-    "Subtotal": {
-      "DataType": "decimal",
+    "TxnID": {
+      "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
-      "Name": "Subtotal",
+      "Name": "TxnID",
       "ParentPath": ""
     },
     "Memo": {
@@ -735,26 +562,26 @@
       "Name": "Memo",
       "ParentPath": ""
     },
-    "CustomerMsgRef": {
-      "DataType": "string",
-      "IsArray": false,
-      "IsRequired": false,
-      "Name": "CustomerMsgRef",
-      "ParentPath": ""
-    },
-    "ShipMethodRef.FullName": {
+    "TemplateRef.FullName": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
       "Name": "FullName",
-      "ParentPath": "ShipMethodRef"
+      "ParentPath": "TemplateRef"
     },
-    "ShipAddress": {
+    "ShipAddress.City": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
-      "Name": "ShipAddress",
-      "ParentPath": ""
+      "Name": "City",
+      "ParentPath": "ShipAddress"
+    },
+    "CustomerRef.FullName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "FullName",
+      "ParentPath": "CustomerRef"
     },
     "ShipAddress.Addr1": {
       "DataType": "string",
@@ -763,21 +590,68 @@
       "Name": "Addr1",
       "ParentPath": "ShipAddress"
     },
-    "ShipAddress.PostalCode": {
+    "TimeCreated": {
+      "DataType": "datetime",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "TimeCreated",
+      "ParentPath": ""
+    },
+    "TermsRef.ListID": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
-      "Name": "PostalCode",
-      "ParentPath": "ShipAddress"
+      "Name": "ListID",
+      "ParentPath": "TermsRef"
     },
-    "ShipAddressBlock.Addr4": {
+    "TemplateRef.ListID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ListID",
+      "ParentPath": "TemplateRef"
+    },
+    "CustomerSalesTaxCodeRef.ListID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ListID",
+      "ParentPath": "CustomerSalesTaxCodeRef"
+    },
+    "CustomerMsgRef.FullName": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "FullName",
+      "ParentPath": "CustomerMsgRef"
+    },
+    "ShippingDetails.ShippingDetailsLineRet.TrackingID": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "TrackingID",
+      "ParentPath": "ShippingDetails.ShippingDetailsLineRet"
+    },
+    "BillAddressBlock.Addr4": {
       "DataType": "string",
       "IsArray": false,
       "IsRequired": false,
       "Name": "Addr4",
-      "ParentPath": "ShipAddressBlock"
+      "ParentPath": "BillAddressBlock"
+    },
+    "Subtotal": {
+      "DataType": "decimal",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "Subtotal",
+      "ParentPath": ""
+    },
+    "ShippingDetails.ShippingDetailsLineRet.ShippingMethod": {
+      "DataType": "string",
+      "IsArray": false,
+      "IsRequired": false,
+      "Name": "ShippingMethod",
+      "ParentPath": "ShippingDetails.ShippingDetailsLineRet"
     }
-  },
-  "TotalRecords": null,
-  "ReportType": "SalesOrder"
+  }
 }
