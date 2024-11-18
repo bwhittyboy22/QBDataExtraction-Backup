@@ -48,7 +48,7 @@ try {
     }
     
     # Create the file path with the date prefix
-    $filePath = Join-Path -Path $subfolderPath -ChildPath "${currentDateTime_FileName}_ECH_TransactionModifiedDateRange.xml"
+    $filePath = Join-Path -Path $subfolderPath -ChildPath "${currentDateTime_FileName}_ECH_Transactions.xml"
     
     # Save the response to the file
     $response | Out-File -FilePath $filePath
