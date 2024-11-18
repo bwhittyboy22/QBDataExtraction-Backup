@@ -6,16 +6,16 @@ $scriptDirectory = Split-Path -Parent $MyInvocation.MyCommand.Path
 
 # Array of month information
 $months = @(
-    # @{ Name = "January";   StartDay = "01"; EndDay = "31"; MonthNumber = '01' },
-    # @{ Name = "February";  StartDay = "01"; EndDay = "28"; MonthNumber = '02' },
-    # @{ Name = "March";     StartDay = "01"; EndDay = "31"; MonthNumber = '03' },
-    # @{ Name = "April";     StartDay = "01"; EndDay = "30"; MonthNumber = '04' },
-    # @{ Name = "May";       StartDay = "01"; EndDay = "31"; MonthNumber = '05' },
-    # @{ Name = "June";      StartDay = "01"; EndDay = "30"; MonthNumber = '06' },
-    # @{ Name = "July";      StartDay = "01"; EndDay = "31"; MonthNumber = '07' }
-    @{ Name = "August";    StartDay = "01"; EndDay = "31"; MonthNumber = '08' }
-    # @{ Name = "September"; StartDay = "01"; EndDay = "30"; MonthNumber = '09' },
-    # @{ Name = "October";   StartDay = "01"; EndDay = "31"; MonthNumber = '10' }
+    @{ Name = "January";   StartDay = "01"; EndDay = "31"; MonthNumber = '01' },
+    @{ Name = "February";  StartDay = "01"; EndDay = "28"; MonthNumber = '02' },
+    @{ Name = "March";     StartDay = "01"; EndDay = "31"; MonthNumber = '03' },
+    @{ Name = "April";     StartDay = "01"; EndDay = "30"; MonthNumber = '04' },
+    @{ Name = "May";       StartDay = "01"; EndDay = "31"; MonthNumber = '05' },
+    @{ Name = "June";      StartDay = "01"; EndDay = "30"; MonthNumber = '06' },
+    @{ Name = "July";      StartDay = "01"; EndDay = "31"; MonthNumber = '07' },
+    @{ Name = "August";    StartDay = "01"; EndDay = "31"; MonthNumber = '08' },
+    @{ Name = "September"; StartDay = "01"; EndDay = "30"; MonthNumber = '09' },
+    @{ Name = "October";   StartDay = "01"; EndDay = "31"; MonthNumber = '10' }
 )
 
 # Get the current year
