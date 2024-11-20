@@ -1,24 +1,25 @@
 # Create instance of COM object
 $qbxmlrp = New-Object -ComObject QBXMLRP2.RequestProcessor
 
-$Division = "SSI"
-$FromReportDate = "2024-08-01"
-$ToReportDate = "2024-08-31"
-$MonthNumber = "08"
-$MonthName = "August"
-
 # Path to QB file
-$companyFile = "C:\QB Files\$($Division)\QB SSI Enterprise 2020.QBW"
+$companyFile = "C:\QB Files\SSI\QB SSI Enterprise 2020.QBW"
 
 try {
   # Open connection to QuickBooks
-  $qbxmlrp.OpenConnection2("","$($Division)QBAutomation", 1)
+  $qbxmlrp.OpenConnection2("","SSIQBAutomation", 1)
   $connectionStatus = "Connection successful"
   Write-Output $connectionStatus
 } catch {
   $connectionStatus = "Connections not successful"
   Write-Output $connectionStatus
 }
+
+$YearNumber = "2024"
+$MonthNumber = "08"
+$FromReportDate = "$($YearNumber)-$($MonthNumber)-01"
+$LastDayOfMonth = [datetime]::DaysInMonth([int]$YearNumber, [int]$MonthNumber)
+$ToReportDate = "$($YearNumber)-$($MonthNumber)-$($LastDayOfMonth)"
+Write-Host "ToReportDate: $ToReportDate"
 
 # Begin a session
 $ticket = $qbxmlrp.BeginSession($companyFile, 2)
@@ -59,7 +60,7 @@ try {
     }
     
     # Create the file path with the date prefix
-    $filePath = Join-Path -Path $subfolderPath -ChildPath "$($Division)_TrialBalance_$($MonthNumber)_$($MonthName).xml"
+    $filePath = Join-Path -Path $subfolderPath -ChildPath "TrialBalance_SSI_$($YearNumber)M$($MonthNumber).xml"
     
     # Save the response to the file
     $response | Out-File -FilePath $filePath

@@ -14,10 +14,12 @@ try {
   Write-Output $connectionStatus
 }
 
-$FromReportDate = "2024-07-01"
-$ToReportDate = "2024-07-31"
-$MonthNumber = "07"
-$MonthName = "Jul"
+$YearNumber = "2023"
+$MonthNumber = "03"
+$FromReportDate = "$($YearNumber)-$($MonthNumber)-01"
+$LastDayOfMonth = [datetime]::DaysInMonth([int]$YearNumber, [int]$MonthNumber)
+$ToReportDate = "$($YearNumber)-$($MonthNumber)-$($LastDayOfMonth)"
+Write-Host "ToReportDate: $ToReportDate"
 
 # Begin a session
 $ticket = $qbxmlrp.BeginSession($companyFile, 2)
@@ -58,7 +60,7 @@ try {
     }
     
     # Create the file path with the date prefix
-    $filePath = Join-Path -Path $subfolderPath -ChildPath "ECH_TrialBalance_$($MonthNumber)_$($MonthName).xml"
+    $filePath = Join-Path -Path $subfolderPath -ChildPath "TrialBalance_ECH_$($YearNumber)M$($MonthNumber).xml"
     
     # Save the response to the file
     $response | Out-File -FilePath $filePath
