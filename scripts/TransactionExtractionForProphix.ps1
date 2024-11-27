@@ -1,4 +1,5 @@
 Import-Module ".\src\PostgreSQLUtils" -Force
+Import-Module ".\src\QuickBooksInterface" -Force
 
 $CompanyFilePath = Get-Content ".\CompanyFIlePaths.json" -Raw | ConvertFrom-Json
 $Divisions = New-Object System.Collections.ArrayList
