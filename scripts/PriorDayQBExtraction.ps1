@@ -20,7 +20,7 @@ $reportPath = Join-Path -Path $baseReportDestinationPath -ChildPath "$currentYea
 
 # New-Item -ItemType Directory -Force -Path $reportPath | Out-Null
 
-$reportTypes = @("Vendor", "Invoice", "SalesOrder", "PurchaseOrder", "Account", "JournalEntry")
+$reportTypes = @("Vendor", "Invoice", "SalesOrder", "PurchaseOrder", "Account")
 $divisionsToProcess = 
     if ($Divisions -eq "All") {
         $companyFilePaths
