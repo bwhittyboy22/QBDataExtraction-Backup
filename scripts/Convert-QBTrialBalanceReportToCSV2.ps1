@@ -16,7 +16,7 @@ function Get-ProphixTimeFromFileName {
     )
 
     if ($FileName -match 'TrialBalance_(\S{2,3})_(\d{4}M\d{2})') {
-        return $matches[]2n
+        return $matches[]
     }
     return $null
 }
