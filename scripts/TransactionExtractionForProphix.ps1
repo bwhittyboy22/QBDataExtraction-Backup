@@ -1,7 +1,7 @@
-Import-Module ".\src\PostgreSQLUtils" -Force
-Import-Module ".\src\QuickBooksInterface" -Force
+Import-Module ".\src\PostgreSQLUtils\PostgreSQLUtils.psd1" -Force
+Import-Module ".\src\QuickBooksInterface\QuickBooksInterface.psd1" -Force
 
-$CompanyFilePath = Get-Content ".\CompanyFIlePaths.json" -Raw | ConvertFrom-Json
+$CompanyFilePath = Get-Content "..\..\CompanyFIlePaths.json" -Raw | ConvertFrom-Json
 $Divisions = New-Object System.Collections.ArrayList
 $Divisions.Clear()
 
