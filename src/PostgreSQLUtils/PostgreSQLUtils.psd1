@@ -5,7 +5,8 @@
     Author = 'Benjamin W'
     Description = 'PostgreSQL utility functions for data loading and querying'
     PowerShellVersion = '5.1'
-    FunctionsToExport = @('ConvertTo-PostgreSQLTable', 'Get-LastLoadDate', 'Set-LastLoadDate')
+    FunctionsToExport = @('ConvertTo-PostgreSQLTable', 'Get-LastLoadDate', `
+    'Set-LastLoadDate', 'Get-TableColumn', 'Initialize-PostgreSQLConnection', 'Test-TableExists')
     PrivateData = @{
         PSData = @{
             Tags = @('PostgreSQL', 'Database', 'CSV')
