@@ -12,7 +12,9 @@
         'Get-TableColumn',
         'Initialize-PostgreSQLConnection',
         'Test-TableExists',
-        'Test-ColumnExists'
+        'Test-ColumnExists',
+        'Get-TableColumn',
+        'Get-DuplicateValuesFromColumn'
         )
     PrivateData = @{
         PSData = @{
