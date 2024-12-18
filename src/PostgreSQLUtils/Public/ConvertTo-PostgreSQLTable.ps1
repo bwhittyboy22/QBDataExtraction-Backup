@@ -5,7 +5,10 @@ function ConvertTo-PostgreSQLTable {
         [string]$CSVFilePath,
         
         [Parameter(Mandatory = $true)]
-        [string]$PostgresTableName
+        [string]$PostgresTableName,
+
+        [Parameter(Mandatory = $false)]
+        [string]$TableSchema = "public"  # Optional schema parameter
     )
 
     begin {
@@ -24,37 +27,46 @@ function ConvertTo-PostgreSQLTable {
         try {
             # Set password as environment variable for psql
             $env:PGPASSWORD = $pgConfig.Password
-
+    
+            # Combine schema and table name
+            $QualifiedTableName = "$TableSchema.$PostgresTableName"
+    
             # Read the CSV file to get headers
             $csvHeaders = (Get-Content $CSVFilePath -First 1).Split(',') | 
                 ForEach-Object { $_.Trim('"') }
-
+    
             # Create table schema based on CSV headers
             $columns = $csvHeaders | ForEach-Object { """$_"" TEXT" }
-            $createTableSQL = "CREATE TABLE IF NOT EXISTS $PostgresTableName ($($columns -join ', '));"
-
-            # Save SQL to a temporary file to avoid command line parsing issues
+            $createTableSQL = "CREATE TABLE IF NOT EXISTS $QualifiedTableName ($($columns -join ', '));"
+    
+            # Save SQL to temporary file
             $tempSqlFile = [System.IO.Path]::GetTempFileName()
             $createTableSQL | Out-File -FilePath $tempSqlFile -Encoding UTF8
-
-            # Execute the SQL from file
+    
+            # Execute table creation and check success
             & psql -h $pgConfig.Server -p $pgConfig.Port -d $pgConfig.Database -U $pgConfig.Username -f $tempSqlFile
+            if ($LASTEXITCODE -ne 0) {
+                throw "Table creation failed for $QualifiedTableName. Ensure the schema exists and you have the correct permissions."
+            }
             Remove-Item $tempSqlFile
-
+    
             # Import the CSV file using COPY command
             & psql -h $pgConfig.Server -p $pgConfig.Port -d $pgConfig.Database -U $pgConfig.Username -c `
-                "\COPY $PostgresTableName FROM '$CSVFilePath' WITH CSV HEADER"
-            
-            Write-Host "CSV file successfully imported to table $PostgresTableName"
+                "\COPY $QualifiedTableName FROM '$CSVFilePath' WITH CSV HEADER"
+            if ($LASTEXITCODE -ne 0) {
+                throw "Failed to import CSV file to table $QualifiedTableName. Verify the file format and table structure."
+            }
+    
+            Write-Host "CSV file successfully imported to table $QualifiedTableName"
         }
         catch {
             Write-Error "An error occurred: $_"
         }
         finally {
             $env:PGPASSWORD = ""
-            if (Test-Path $tempSqlFile) {
+            if ($tempSqlFile -and (Test-Path $tempSqlFile)) {
                 Remove-Item $tempSqlFile
             }
         }
-    }
+    }    
 }

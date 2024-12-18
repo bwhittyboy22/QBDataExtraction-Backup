@@ -7,13 +7,14 @@
     Description = 'PowerShell module for interacting with QuickBooks Enterprise Desktop using the SDK. Provides functions for querying and extracting reports.'
     PowerShellVersion = '7.0'
     FunctionsToExport = @(
-        'Start-OpenConnection2ForQuickBooks',
-        'Stop-OpenConnection2ForQuickBooks',
-        'Start-SessionInQuickBooks',
-        'Stop-SessionInQuickBooks',
+        'Convert-QBXMLtoCSV',
         'Get-Report',
         'Save-QBXMLFile',
-        'Set-TestMode'
+        'Set-TestMode',
+        'Start-OpenConnection2ForQuickBooks',
+        'Start-SessionInQuickBooks',
+        'Stop-OpenConnection2ForQuickBooks',
+        'Stop-SessionInQuickBooks'
     )
     CmdletsToExport = @()
     VariablesToExport = '*'
