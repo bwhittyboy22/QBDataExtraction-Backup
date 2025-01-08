@@ -14,10 +14,17 @@ try {
   Write-Output $connectionStatus
 }
 
+try {
+  # Begin a session
+  $ticket = $qbxmlrp.BeginSession($companyFile, 2)
+  $sessionStatus = "Session sucessful"
+  Write-Output $sessionStatus
+} catch {
+  $sessionStatus = "Session not established"
+  Write-Output $sessionStatus
+}
 
-# Begin a session
-$ticket = $qbxmlrp.BeginSession($companyFile, 2)
-
+<#
 # QBXML request
 $qbxmlRequest = @"
 <?qbxml version="13.0"?>
@@ -27,11 +34,33 @@ $qbxmlRequest = @"
     </QBXMLMsgsRq>
   </QBXML>
 "@
+#>
+
+$fromDate   = "2018-01-01T00:00:00"
+$toDate     = "2024-12-31T23:59:59"
+$StringToPrint = @"
+From date: $fromDate, To date: $toDate
+"@
+Write-Host $StringToPrint
+
+
+# QBXML request
+$qbxmlRequest = @"
+<?qbxml version="13.0"?>
+  <QBXML>
+    <QBXMLMsgsRq onError="continueOnError">
+        <TransactionQueryRq requestID="2">
+        </TransactionQueryRq>
+    </QBXMLMsgsRq>
+  </QBXML>
+"@
 
 # Try to send the request and catch any errors
 try {
     # Send the request
+    Write-Output "Sending query..."
     $response = $qbxmlrp.ProcessRequest($ticket, $qbxmlRequest)
+    Write-Output "Query received"
     
     # Save the response if successful
     # Get the current date and time
