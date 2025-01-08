@@ -14,6 +14,7 @@
         'Test-TableExists',
         'Test-ColumnExists',
         'Get-TableColumn',
+        'Get-TableRow',
         'Get-DuplicateValuesFromColumn'
         )
     PrivateData = @{
