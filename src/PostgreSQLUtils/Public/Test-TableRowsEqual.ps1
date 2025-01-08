@@ -5,9 +5,11 @@ function Test-TableRowsEqual {
         [PSCustomObject]$RowA,
 
         [Parameter(Mandatory = $true)]
-        [PSCustomObject]$RowB
+        [PSCustomObject]$RowB,
+
+        [Parameter(Mandatory = $false)]
+        [switch]$IgnoreMetaData
     )
-    
 
     process {
         # Compare metadata
@@ -21,17 +23,31 @@ function Test-TableRowsEqual {
         $dataA = $RowA.Data
         $dataB = $RowB.Data
 
-        # Ensure both data sets have the same keys and then compare the key-value pair
+        # If IgnoreMetaData is enabled, filter out keys starting with "md_"
+        if ($IgnoreMetaData) {
+            $filteredKeysA = $dataA.Keys.Where({ -not $_.StartsWith("md_") })
+            $filteredKeysB = $dataB.Keys.Where({ -not $_.StartsWith("md_") })
+
+            # Create filtered hash tables for comparison
+            $dataA = @{}
+            foreach ($key in $filteredKeysA) {
+                $dataA[$key] = $RowA.Data[$key]
+            }
+
+            $dataB = @{}
+            foreach ($key in $filteredKeysB) {
+                $dataB[$key] = $RowB.Data[$key]
+            }
+        }
+
+        # Ensure both data sets have the same keys and then compare the key-value pairs
         if ($dataA.Keys.Count -ne $dataB.Keys.Count) {
             return $false
         }
 
-        if (-not ($dataA.Keys | Sort-Object | Compare-Object -ReferenceObject ($dataB.Keys | Sort-Object) -ExcludeDifferent)) {
-            return $false
-        }
-
+        # Compare keys and their values
         foreach ($key in $dataA.Keys) {
-            if ($dataA[$key] -ne $dataB[$key]) {
+            if (-not $dataB.ContainsKey($key) -or $dataA[$key] -ne $dataB[$key]) {
                 return $false
             }
         }
