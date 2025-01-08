@@ -36,7 +36,7 @@ function Merge-DeltaData {
             # Get current date for metadata
             $currentDate = (Get-Date).ToString('yyyy-MM-dd')
 
-            # First, let's get the exact case of the column name from PostgreSQL
+            # Get the exact case of the column name from PostgreSQL
             $columnCaseSQL = @"
 SELECT column_name 
 FROM information_schema.columns 
@@ -50,13 +50,35 @@ AND lower(column_name) = lower('$KeyColumn');
                 throw "Column $KeyColumn not found in table $PublicSchema.$TableName"
             }
 
+            # Check if records have already been processed today
+            $checkProcessedSQL = @"
+WITH delta_records AS (
+    SELECT DISTINCT d."$exactColumnName"
+    FROM "$DeltaSchema"."$TableName" d
+    INNER JOIN "$PublicSchema"."$TableName" p 
+    ON d."$exactColumnName" = p."$exactColumnName"
+    WHERE p.md_is_current = true 
+    AND p.md_upload_date = '$currentDate'
+)
+SELECT COUNT(*) FROM delta_records;
+"@
+            $alreadyProcessed = [int](& psql -h $pgConfig.Server -p $pgConfig.Port -d $pgConfig.Database -U $pgConfig.Username -t -A -c $checkProcessedSQL).Trim()
+
+            if ($alreadyProcessed -gt 0) {
+                Write-Warning "These changes have already been processed today. Rolling back transaction."
+                $rollbackTransactionSQL = "ROLLBACK;"
+                & psql -h $pgConfig.Server -p $pgConfig.Port -d $pgConfig.Database -U $pgConfig.Username -c $rollbackTransactionSQL
+                return
+            }
+
             # Update existing records (SCD Type 3)
             $updateExistingSQL = @"
 WITH matching_records AS (
-    SELECT p."$exactColumnName"
+    SELECT DISTINCT p."$exactColumnName"
     FROM "$PublicSchema"."$TableName" p
     INNER JOIN "$DeltaSchema"."$TableName" d ON p."$exactColumnName" = d."$exactColumnName"
     WHERE p.md_is_current = true
+    AND p.md_upload_date != '$currentDate'
 )
 UPDATE "$PublicSchema"."$TableName" 
 SET 
@@ -77,6 +99,7 @@ INSERT INTO "$PublicSchema"."$TableName" (
     FROM "$DeltaSchema"."$TableName" d
     INNER JOIN "$PublicSchema"."$TableName" p ON d."$exactColumnName" = p."$exactColumnName"
     WHERE p.md_is_current = false
+    AND p.md_replaced_date = '$currentDate'
 );
 "@
             & psql -h $pgConfig.Server -p $pgConfig.Port -d $pgConfig.Database -U $pgConfig.Username -c $insertExistingSQL

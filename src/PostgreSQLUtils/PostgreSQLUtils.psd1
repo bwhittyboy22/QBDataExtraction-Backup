@@ -14,8 +14,8 @@
         'Initialize-PostgreSQLConnection',
         'Test-TableExists',
         'Test-ColumnExists',
-        "Test-TableRowsEqual",
-        "Test-ArrayOfRowsEqual",
+        'Test-TableRowsEqual',
+        'Test-ArrayOfRowsEqual',
         'Get-TableColumn',
         'Get-TableRowCount',
         'Get-TableDuplicates',
@@ -23,6 +23,7 @@
         'Get-TableRow',
         'Get-TableRows',
         'Get-MostRecentRow',
+        'Restore-TableState',
         'Get-DuplicateValuesFromColumn'
         )
     PrivateData = @{
