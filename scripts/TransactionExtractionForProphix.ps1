@@ -24,8 +24,10 @@ foreach ($divisionName in $CompanyFilePath.PSObject.Properties.Name) {
     ##################################################################################################################
     # Query QB from the last update date and current date                                                            #
     ##################################################################################################################
+    $CompanyFilePath.$divisionName
     $result = Get-Transactions -FromDate $queryFormattedDate -DivisionName $divisionName -CompanyFilePath $CompanyFilePath.$divisionName
-    
+  
+
     if ($result.success) {
         $Results[$divisionName] = $result
         Write-Output "Successfully processed $divisionName"
@@ -34,18 +36,35 @@ foreach ($divisionName in $CompanyFilePath.PSObject.Properties.Name) {
     }
 
     Start-Sleep -Seconds 3
+
 }
+
+##################################################################################################################
+# Convert XML document to CSV                                                                                    #
+##################################################################################################################
+# Create new hashtable to store converted paths
+$ConvertedResults = @{}
+foreach ($division in $Results.Keys) {
+    $csvOutputPath = $Results[$division].deltaCSVPath -replace '\.xml$', '.csv'
+    Convert-QBXMLtoCSV -ReportType "Transaction" -XMLFilePath $Results[$division].deltaCSVPath -OutputPath $csvOutputPath
+    $ConvertedResults[$division] = @{ deltaCSVPath = $csvOutputPath }
+}
+$Results = $ConvertedResults
 
 ##################################################################################################################
 # Upload CSV file to PostgreSQL server                                                                           #
 ##################################################################################################################
 foreach ($division in $Results.Keys) {
-
     try {
+        $filePath = $Results[$division].deltaCSVPath
+        if ($filePath -notmatch '\.csv$') {
+            Write-Error "Invalid file type for $division. Expected CSV file."
+            continue
+        }
         Write-Output "Uploading DELTA CSV file to PostgreSQL table"
         Write-Output "Division: $division"
-        Write-Output "File Path: $($Results[$division].deltaCSVPath)"
-        ConvertTo-PostgreSQLTable -CSVFilePath $transactionCSVFile -PostgresTableName "${division}_transactions" -TableSchema "delta"
+        Write-Output "File Path: $filePath"
+        ConvertTo-PostgreSQLTable2 -CSVFilePath $filePath -PostgresTableName "${division}_transactions" -TableSchema "delta"
         Write-Output "DELTA table creation complete"
     }
     catch {
@@ -53,3 +72,5 @@ foreach ($division in $Results.Keys) {
         Write-Error "Error: $_"
     }
 }
+
+& "$PSScriptRoot\MergeTransactionTables.ps1"

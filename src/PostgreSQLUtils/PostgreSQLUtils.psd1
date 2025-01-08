@@ -24,7 +24,8 @@
         'Get-TableRows',
         'Get-MostRecentRow',
         'Restore-TableState',
-        'Get-DuplicateValuesFromColumn'
+        'Get-DuplicateValuesFromColumn',
+        'Remove-PostgreSQLTable'
         )
     PrivateData = @{
         PSData = @{
