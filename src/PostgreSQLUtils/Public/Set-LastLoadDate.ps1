@@ -31,17 +31,17 @@ function Set-LastLoadDate {
             $formattedDate = $LoadDate.ToString('yyyy-MM-dd')
 
             # First check if the record exists
-            $checkSQL = 'SELECT COUNT(*) FROM "ExtractionLog" WHERE "TableName" = ''' + $TableName + ''';'
+            $checkSQL = 'SELECT COUNT(*) FROM "extraction_log" WHERE "tablename" = ''' + $TableName + ''';'
             $exists = & psql -h $pgConfig.Server -p $pgConfig.Port -d $pgConfig.Database -U $pgConfig.Username -t -A -c $checkSQL
 
             if ($exists.Trim() -eq "0") {
                 # Insert new record
-                $insertSQL = 'INSERT INTO "ExtractionLog" ("TableName", "LastUpdDte") VALUES (''' + $TableName + ''', ''' + $formattedDate + ''');'
+                $insertSQL = 'INSERT INTO "extraction_log" ("tablename", "lastupddte") VALUES (''' + $TableName + ''', ''' + $formattedDate + ''');'
                 & psql -h $pgConfig.Server -p $pgConfig.Port -d $pgConfig.Database -U $pgConfig.Username -c $insertSQL
             }
             else {
                 # Update existing record
-                $updateSQL = 'UPDATE "ExtractionLog" SET "LastUpdDte" = ''' + $formattedDate + ''' WHERE "TableName" = ''' + $TableName + ''';'
+                $updateSQL = 'UPDATE "extraction_log" SET "lastupddte" = ''' + $formattedDate + ''' WHERE "tablename" = ''' + $TableName + ''';'
                 & psql -h $pgConfig.Server -p $pgConfig.Port -d $pgConfig.Database -U $pgConfig.Username -c $updateSQL
             }
 
