@@ -13,6 +13,7 @@
         'Initialize-PostgreSQLConnection',
         'Test-TableExists',
         'Test-ColumnExists',
+        "Test-TableRowsEqual",
         'Get-TableColumn',
         'Get-TableRow',
         'Get-DuplicateValuesFromColumn'
