@@ -17,18 +17,21 @@ function Test-TableRowsEqual {
             return $false
         }
 
-        # Compare data arrays
+        # Compare data hash tables
         $dataA = $RowA.Data
         $dataB = $RowB.Data
 
-        # Ensure lengths are the same
-        if ($dataA.Count -ne $dataB.Count) {
+        # Ensure both data sets have the same keys and then compare the key-value pair
+        if ($dataA.Keys.Count -ne $dataB.Keys.Count) {
             return $false
         }
 
-        # Compare each element
-        for ($i = 0; $i -lt $dataA.Count; $i++) {
-            if ($dataA[$i] -ne $dataB[$i]) {
+        if (-not ($dataA.Keys | Sort-Object | Compare-Object -ReferenceObject ($dataB.Keys | Sort-Object) -ExcludeDifferent)) {
+            return $false
+        }
+
+        foreach ($key in $dataA.Keys) {
+            if ($dataA[$key] -ne $dataB[$key]) {
                 return $false
             }
         }

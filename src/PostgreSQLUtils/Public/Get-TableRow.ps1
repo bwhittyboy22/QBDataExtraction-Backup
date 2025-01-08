@@ -42,25 +42,42 @@ function Get-TableRow {
             # Set the PGPASSWORD environment variable
             $env:PGPASSWORD = $pgConfig.Password
 
-            # SQL query to get the row data
+            # SQL query to fetch column headers and row data
             $sql = @"
 SELECT *
 FROM "$TableSchema"."$TableName"
 WHERE "$KeyColumn" = '$KeyValue';
 "@
 
-            # Execute the command and capture the output
-            $output = & psql -h $pgConfig.Server -p $pgConfig.Port -d $pgConfig.Database -U $pgConfig.Username -t -A -F"," -c $sql
+            # Get column headers
+            $headerSql = @"
+SELECT column_name
+FROM information_schema.columns
+WHERE table_schema = '$TableSchema'
+  AND table_name = '$TableName';
+"@
 
-            # Process the output into a structured object
+            # Execute SQL queries
+            $headersOutput = & psql -h $pgConfig.Server -p $pgConfig.Port -d $pgConfig.Database -U $pgConfig.Username -t -A -c $headerSql
+            $rowOutput = & psql -h $pgConfig.Server -p $pgConfig.Port -d $pgConfig.Database -U $pgConfig.Username -t -A -F"," -c $sql
+
+            # Process headers and row into a key-value structure
             $results = @()
-            if ($output -ne "") {
-                $columns = $output.Split(",")
+            if ($rowOutput -ne "" -and $headersOutput -ne "") {
+                $headers = $headersOutput.Trim().Split("`n")
+                $values = $rowOutput.Split(",")
+                
+                # Create a key-value pair for headers and values
+                $data = @{}
+                for ($i = 0; $i -lt $headers.Count; $i++) {
+                    $data[$headers[$i]] = $values[$i]
+                }
+
                 $results = [PSCustomObject]@{
                     Table = $TableName
                     KeyColumn = $KeyColumn
                     KeyValue = $KeyValue
-                    Data = $columns
+                    Data = $data
                 }
             }
 
