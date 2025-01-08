@@ -6,7 +6,8 @@
     Description = 'PostgreSQL utility functions for data loading and querying'
     PowerShellVersion = '5.1'
     FunctionsToExport = @(
-        'ConvertTo-PostgreSQLTable', 
+        'ConvertTo-PostgreSQLTable',
+        'ConvertTo-PostgreSQLTable2',
         'Get-LastLoadDate',
         'Set-LastLoadDate', 
         'Get-TableColumn',
@@ -14,8 +15,14 @@
         'Test-TableExists',
         'Test-ColumnExists',
         "Test-TableRowsEqual",
+        "Test-ArrayOfRowsEqual",
         'Get-TableColumn',
+        'Get-TableRowCount',
+        'Get-TableDuplicates',
+        'Merge-DeltaData',
         'Get-TableRow',
+        'Get-TableRows',
+        'Get-MostRecentRow',
         'Get-DuplicateValuesFromColumn'
         )
     PrivateData = @{
