@@ -18,7 +18,7 @@ function Get-LastLoadDate {
             $env:PGPASSWORD = $pgConfig.Password
 
             # SQL query with proper quoting
-            $sql = 'SELECT "LastUpdDte" FROM "ExtractionLog" WHERE "TableName" = ''' + $TableName + ''';'
+            $sql = 'SELECT "lastupddte" FROM "extraction_log" WHERE "tablename" = ''' + $TableName + ''';'
 
             # Execute the command and capture the output
             $output = & psql -h $pgConfig.Server -p $pgConfig.Port -d $pgConfig.Database -U $pgConfig.Username -t -A -c $sql

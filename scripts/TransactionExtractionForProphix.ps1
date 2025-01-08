@@ -10,3 +10,11 @@ foreach ($divisionName in $CompanyFilePath.PSObject.Properties.Name) {
     $Divisions.Add($divisionName) | Out-Null
     $CompanyFilePath.$divisionName
 }
+
+##################################################################################################################
+#                                         TODO: Get date of last update from PostegreSQL table                   #
+##################################################################################################################
+
+$extractionDate = Get-LastLoadDate -TableName "ech_transactions"
+$extractionDate
+
