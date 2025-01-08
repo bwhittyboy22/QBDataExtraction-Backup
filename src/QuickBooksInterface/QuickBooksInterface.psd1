@@ -14,7 +14,8 @@
         'Start-OpenConnection2ForQuickBooks',
         'Start-SessionInQuickBooks',
         'Stop-OpenConnection2ForQuickBooks',
-        'Stop-SessionInQuickBooks'
+        'Stop-SessionInQuickBooks',
+        'Get-Transactions'
     )
     CmdletsToExport = @()
     VariablesToExport = '*'
