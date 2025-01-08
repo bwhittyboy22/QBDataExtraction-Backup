@@ -8,4 +8,5 @@ $Divisions.Clear()
 # Loop through each property name and add it to $Divisions individually
 foreach ($divisionName in $CompanyFilePath.PSObject.Properties.Name) {
     $Divisions.Add($divisionName) | Out-Null
+    $CompanyFilePath.$divisionName
 }
