@@ -14,8 +14,8 @@ try {
   Write-Output $connectionStatus
 }
 
-$YearNumber = "2023"
-$MonthNumber = "03"
+$YearNumber = "2025"
+$MonthNumber = "02"
 $FromReportDate = "$($YearNumber)-$($MonthNumber)-01"
 $LastDayOfMonth = [datetime]::DaysInMonth([int]$YearNumber, [int]$MonthNumber)
 $ToReportDate = "$($YearNumber)-$($MonthNumber)-$($LastDayOfMonth)"

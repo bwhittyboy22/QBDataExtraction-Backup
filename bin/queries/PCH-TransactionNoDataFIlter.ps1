@@ -10,13 +10,19 @@ try {
   $connectionStatus = "Connection successful"
   Write-Output $connectionStatus
 } catch {
-  $connectionStatus = "Connections not successful"
+  $connectionStatus = "Connection not successful"
   Write-Output $connectionStatus
+  throw "Failed to connect to QuickBooks. Terminating script."
 }
 
-
 # Begin a session
-$ticket = $qbxmlrp.BeginSession($companyFile, 2)
+try {
+  $ticket = $qbxmlrp.BeginSession($companyFile, 2)
+  Write-Output "Session established successfully. Ticket: $ticket"
+} catch {
+  Write-Error "Session not established: $($_.Exception.Message)"
+  throw "Failed to begin QuickBooks session. Terminating script."
+}
 
 # QBXML request
 $qbxmlRequest = @"

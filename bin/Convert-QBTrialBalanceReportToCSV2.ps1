@@ -1,6 +1,6 @@
 # Parameters for input/output paths
 param(
-    [Parameter(Mandatory=$true)]n
+    [Parameter(Mandatory=$true)]
     [string[]]$XMLFile,
 
     [Parameter(Mandatory=$false)]
@@ -16,7 +16,7 @@ function Get-ProphixTimeFromFileName {
     )
 
     if ($FileName -match 'TrialBalance_(\S{2,3})_(\d{4}M\d{2})') {
-        return $matches[]
+        return $matches[2]  # Returns "2025M01"
     }
     return $null
 }
