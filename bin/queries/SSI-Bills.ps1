@@ -5,7 +5,7 @@ $qbxmlrp = New-Object -ComObject QBXMLRP2.RequestProcessor
 $companyFile = "C:\QB Files\SSI\QB SSI Enterprise 2020.QBW"
 
 #Open connection to QuickBooks
-$qbxmlrp.OpenConnection2("","ECHQuickBooksAutomationScript", 1)
+$qbxmlrp.OpenConnection2("","SSIQBAutomation", 1)
 
 # Begin a session
 $ticket = $qbxmlrp.BeginSession($companyFile, 2)

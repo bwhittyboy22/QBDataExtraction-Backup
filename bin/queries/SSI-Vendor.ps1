@@ -15,7 +15,7 @@ $qbxmlRequest = @"
 <?qbxml version="2.0"?>
 <QBXML>
   <QBXMLMsgsRq onError="continueOnError">
-    <VendorQueryRq requestID="2" />
+    <CustomerQueryRq requestID="2" />
   </QBXMLMsgsRq>
 </QBXML>
 "@
@@ -31,7 +31,7 @@ $qbxmlrp.CloseConnection()
 
 $documentsPath = [System.Environment]::GetFolderPath("MyDocuments")
 
-$filePath = Join-Path -Path $documentsPath -ChildPath "SSI_Vendor.xml"
+$filePath = Join-Path -Path $documentsPath -ChildPath "SSI_Customer.xml"
 
 $response | Out-File -FilePath $filePath
 
