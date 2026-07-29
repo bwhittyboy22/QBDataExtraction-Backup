@@ -20,3 +20,6 @@ build/
 
 # Other files to exclude
 /src/misc/
+/playground/*
+files/exports/ssi/
+files/exports/ech/
