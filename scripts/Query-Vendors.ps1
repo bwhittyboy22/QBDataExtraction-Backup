@@ -10,7 +10,6 @@ param(
     [string]$SavePath
 )
 
-# Validate the company file exists before we bother connecting.
 if (-not (Test-Path -Path $CompanyFile -PathType Leaf)) {
     Write-Error "Company file not found: $CompanyFile"
     exit 1
@@ -26,29 +25,27 @@ if (-not (Test-Path $SavePath)) {
     New-Item -ItemType Directory -Path $SavePath -Force | Out-Null
 }
 
-# Track what we actually started so we only tear down what exists.
+
 $qbxmlrp        = $null
 $ticket         = $null
 $connectionOpen = $false
 $sessionBegun   = $false
 
 try {
-    # --- Create the COM object ---
     try {
         $qbxmlrp = New-Object -ComObject QBXMLRP2.RequestProcessor
     }
     catch {
-        throw "Could not create the QuickBooks COM object (QBXMLRP2.RequestProcessor). Is the QuickBooks SDK installed and registered? Underlying error: $($_.Exception.Message)"
+        throw "Could not create the QuickBooks COM object (QBXMLRP2.RequestProcessor). `
+        Is the QuickBooks SDK installed and registered? Underlying error: $($_.Exception.Message)"
     }
 
-    # --- Open connection & begin session ---
     $qbxmlrp.OpenConnection2("", "SSIQBAutomation", 1)
     $connectionOpen = $true
 
     $ticket = $qbxmlrp.BeginSession($CompanyFile, 2)
     $sessionBegun = $true
 
-    # --- Vendor query ---
     $qbxmlRequest = @"
 <?qbxml version="2.0"?>
 <QBXML>
@@ -60,7 +57,6 @@ try {
 
     $response = $qbxmlrp.ProcessRequest($ticket, $qbxmlRequest)
 
-    # --- Save (only reached if the query succeeded) ---
     $fileName = "$(Get-Date -Format 'yyyyMMdd_HHmmss')_$($Division)_Vendor.xml"
     $filePath = Join-Path -Path $SavePath -ChildPath $fileName
     $response | Out-File -FilePath $filePath -Encoding UTF8
