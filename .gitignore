@@ -23,3 +23,6 @@ build/
 /playground/*
 files/exports/ssi/
 files/exports/ech/
+
+CompanyFilePaths.json
+CompanyFilePaths2.json
