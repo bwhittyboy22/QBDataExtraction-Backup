@@ -68,7 +68,7 @@ try {
 
 # QBXML request
 $qbxmlRequest = @"
-<?qbxml version="13.0"?>
+<?qbxml version="16.0"?>
   <QBXML>
     <QBXMLMsgsRq onError="continueOnError">
         <TransactionQueryRq requestID="2">
